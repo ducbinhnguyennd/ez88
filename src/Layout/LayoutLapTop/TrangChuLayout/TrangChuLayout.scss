@@ -105,6 +105,7 @@
         flex: 0 0 25% !important;
         max-width: 25%;
     }
+
     .GameInfo_col_md_6__fVYEq {
         flex: 0 0 50% !important;
         max-width: 50%;
@@ -192,4 +193,76 @@
     flex-wrap: wrap;
     margin-right: -10px;
     margin-left: -10px;
+}
+
+.bestgame_container {
+    padding-bottom: 32px;
+    color: #fff;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.titlesection_container {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.titlesection_name {
+    margin-right: auto;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+@media (max-width: 1440px) {
+    .gridcolumn_container.gridcolumn_col6.gridcolumn_sm {
+        --columns: 5 !important;
+    }
+}
+
+@media (max-width: 1600px) {
+    .gridcolumn_container.gridcolumn_col6.gridcolumn_sm {
+        --columns: 6;
+    }
+}
+
+.gridcolumn_container.gridcolumn_col6.gridcolumn_sm {
+    --columns: 6;
+    --gap: 12px;
+}
+
+.gridcolumn_container {
+    --columns: 3;
+    --gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+    grid-gap: var(--gap);
+}
+
+.gotogame_container{
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+}
+.cardgame_container{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.cardgame_img{
+    color: transparent;
+    max-width: 100%;
+    transition: 0.2s;
+    display: block;
+    object-fit: cover;
+
 }

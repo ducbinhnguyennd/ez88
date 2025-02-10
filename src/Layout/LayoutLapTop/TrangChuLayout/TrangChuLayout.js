@@ -39,10 +39,10 @@ function TrangChuLayout () {
                   <img src='/images/banner1.png' alt='Banner 1' />
                 </div>
                 <div className='banner_item'>
-                  <img src='/images/banner1.png' alt='Banner 2' />
+                  <img src='/images/banner2.png' alt='Banner 2' />
                 </div>
                 <div className='banner_item'>
-                  <img src='/images/banner1.png' alt='Banner 3' />
+                  <img src='/images/banner3.png' alt='Banner 3' />
                 </div>
               </Slider>
             </div>
@@ -166,11 +166,11 @@ function TrangChuLayout () {
                       <p>XỔ SỐ</p>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
+  
         </div>
       </div>
     </main>

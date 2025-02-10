@@ -1,5 +1,19 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { useState } from 'react'
 import './Header.scss'
+import { DangNhapLayout } from '../../DangNhapLayout'
+import { useLocation } from 'react-router-dom'
+import { DangKyLayout } from '../../DangKyLayout'
 function Header () {
+  const [isModalDangnhap, setisOpenModalDangNhap] = useState(false)
+  const [isModalDangKy, setIsOpenDangKy] = useState(false)
+  const location = useLocation()
+  const [isDangNhap, setIsDangNhap] = useState(
+    sessionStorage.getItem('isDangNhap')
+  )
+
+
   return (
     <div>
       <div className='header'>
@@ -45,21 +59,97 @@ function Header () {
               </div>
             </div>
           </div>
-
-          <div className='GroupControlHeader_group_chat__ZQeHs'>
-            <div className='GroupAuth_groupBtn__HWS4v'>
-              <div className='Button_container__By3IT Button_maxContent__29WwM'>
-                <div className='Button_textLight__bOO84 Button_bold__oPRj9 Button_rounded_4__aAM9e Button_maxContent__29WwM Button_small__ZiSjz Button_btn__z_3IU'>
-                  <div className='Button_text__FcN3u'>Đăng nhập</div>
+          {isDangNhap ? (
+            <div className='GroupControlHeader_group_chat__ZQeHs'>
+              <div className='GroupLogged_container__r_YCs'>
+                <div className='GroupLogged_groupText__Jz1OU'>
+                  <img src='/images/USD.webp' alt='' width={22} height={22} />
+                  <span class='GroupLogged_coin__cQg_b' id='coin'>
+                    0
+                  </span>
+                  <svg
+                    stroke='currentColor'
+                    fill='currentColor'
+                    stroke-width='0'
+                    viewBox='0 0 512 512'
+                    color='var(--text-color)'
+                    height='1em'
+                    width='1em'
+                    xmlns='http://www.w3.org/2000/svg'
+                    style={{ color: '#98a7b5' }}
+                  >
+                    <path d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'></path>
+                  </svg>
                 </div>
+                <a
+                  href=''
+                  className='Button_container__By3IT Button_maxContent__29WwM'
+                >
+                  <div className='Button_primaryLight__xb5yf Button_maxContent__29WwM Button_small__ZiSjz Button_rounded_6__tsqKR Button_p_6_12__yWNI_ Button_btn__z_3IU'>
+                    <div className='Button_text__FcN3u'>
+                      <span className='GroupLogged_btn__DXtBn'>
+                        <i>
+                          <svg
+                            stroke='currentColor'
+                            fill='currentColor'
+                            stroke-width='0'
+                            viewBox='0 0 24 24'
+                            height='1em'
+                            width='1em'
+                            xmlns='http://www.w3.org/2000/svg'
+                          >
+                            <path fill='none' d='M0 0h24v24H0V0z'></path>
+                            <path d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z'></path>
+                          </svg>
+                        </i>
+                        Nạp tiền
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <div
+                  className='GroupLogged_avatar__28Red'
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className='Avatar_container__OtlQL'>
+                    <span className='span_avatar'>
+                      <img
+                        src='/images/avatar.webp'
+                        alt=''
+                        className='imgavatar'
+                      />
+                    </span>
+                  </div>
+                </div>
+                <span class='GroupLogged_username__La8dz'>tentoila99</span>
               </div>
-              <div className='Button_container__By3IT Button_maxContent__29WwM'>
-                <div className='Button_bold__oPRj9 Button_primaryLight__xb5yf Button_rounded_4__aAM9e Button_maxContent__29WwM Button_small__ZiSjz Button_btn__z_3IU'>
-                  <div className='Button_text__FcN3u'>Tham gia ngay</div>
+            </div>
+          ) : (
+            <div className='GroupControlHeader_group_chat__ZQeHs'>
+              <div className='GroupAuth_groupBtn__HWS4v'>
+                <div className='Button_container__By3IT Button_maxContent__29WwM'>
+                  <div className='Button_textLight__bOO84 Button_bold__oPRj9 Button_rounded_4__aAM9e Button_maxContent__29WwM Button_small__ZiSjz Button_btn__z_3IU'>
+                    <div
+                      className='Button_text__FcN3u'
+                      onClick={() => setisOpenModalDangNhap(true)}
+                    >
+                      Đăng nhập
+                    </div>
+                  </div>
+                </div>
+                <div className='Button_container__By3IT Button_maxContent__29WwM'>
+                  <div className='Button_bold__oPRj9 Button_primaryLight__xb5yf Button_rounded_4__aAM9e Button_maxContent__29WwM Button_small__ZiSjz Button_btn__z_3IU'>
+                    <div
+                      className='Button_text__FcN3u'
+                      onClick={() => setIsOpenDangKy(true)}
+                    >
+                      Tham gia ngay
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
       <div className='headermenu'>
@@ -67,22 +157,40 @@ function Header () {
           <div className='headermainmenu'>
             <ul role='menu' className='headerlist'>
               <li>
-                <a href='/' className='headeritem'>
+                <a
+                  href='/'
+                  className={`headeritem ${
+                    location.pathname === '/' ? 'active' : ''
+                  }`}
+                >
                   <img
                     width={24}
                     height={24}
-                    src='/images/trangchu.webp'
+                    src={
+                      location.pathname === '/'
+                        ? '/images/trangchu2.webp'
+                        : '/images/trangchu.webp'
+                    }
                     alt=''
                   />
                   <span>Trang Chủ</span>
                 </a>
               </li>
               <li>
-                <a href='/' className='headeritem'>
+                <a
+                  href='/thethao'
+                  className={`headeritem ${
+                    location.pathname === '/thethao' ? 'active' : ''
+                  }`}
+                >
                   <img
                     width={24}
                     height={24}
-                    src='/images/trangchu.webp'
+                    src={
+                      location.pathname === '/thethao'
+                        ? '/images/thethao2.webp'
+                        : '/images/thethao.webp'
+                    }
                     alt=''
                   />
                   <span>Thể thao</span>
@@ -90,11 +198,20 @@ function Header () {
               </li>
 
               <li>
-                <a href='/' className='headeritem'>
+                <a
+                  href='/casino'
+                  className={`headeritem ${
+                    location.pathname === '/casino' ? 'active' : ''
+                  }`}
+                >
                   <img
                     width={24}
                     height={24}
-                    src='/images/trangchu.webp'
+                    src={
+                      location.pathname === '/casino'
+                        ? '/images/casino2.webp'
+                        : '/images/casino.webp'
+                    }
                     alt=''
                   />
                   <span>Casino</span>
@@ -102,11 +219,20 @@ function Header () {
               </li>
 
               <li>
-                <a href='/' className='headeritem'>
+                <a
+                  href='/slots'
+                  className={`headeritem ${
+                    location.pathname === '/slots' ? 'active' : ''
+                  }`}
+                >
                   <img
                     width={24}
                     height={24}
-                    src='/images/trangchu.webp'
+                    src={
+                      location.pathname === '/slots'
+                        ? '/images/slots2.webp'
+                        : '/images/slots.webp'
+                    }
                     alt=''
                   />
                   <span>Slots</span>
@@ -114,11 +240,20 @@ function Header () {
               </li>
 
               <li>
-                <a href='/' className='headeritem'>
+                <a
+                  href='/banca'
+                  className={`headeritem ${
+                    location.pathname === '/banca' ? 'active' : ''
+                  }`}
+                >
                   <img
                     width={24}
                     height={24}
-                    src='/images/trangchu.webp'
+                    src={
+                      location.pathname === '/banca'
+                        ? '/images/banca2.webp'
+                        : '/images/banca.webp'
+                    }
                     alt=''
                   />
                   <span>Bắn cá</span>
@@ -126,11 +261,20 @@ function Header () {
               </li>
 
               <li>
-                <a href='/' className='headeritem'>
+                <a
+                  href='/xoso'
+                  className={`headeritem ${
+                    location.pathname === '/xoso' ? 'active' : ''
+                  }`}
+                >
                   <img
                     width={24}
                     height={24}
-                    src='/images/trangchu.webp'
+                    src={
+                      location.pathname === '/xoso'
+                        ? '/images/xoso2.webp'
+                        : '/images/xoso.webp'
+                    }
                     alt=''
                   />
                   <span>Xổ số</span>
@@ -138,11 +282,20 @@ function Header () {
               </li>
 
               <li>
-                <a href='/' className='headeritem'>
+                <a
+                  href='/khuyenmai'
+                  className={`headeritem ${
+                    location.pathname === '/khuyenmai' ? 'active' : ''
+                  }`}
+                >
                   <img
                     width={24}
                     height={24}
-                    src='/images/trangchu.webp'
+                    src={
+                      location.pathname === '/khuyenmai'
+                        ? '/images/khuyenmai2.webp'
+                        : '/images/khuyenmai.webp'
+                    }
                     alt=''
                   />
                   <span>Khuyến mãi</span>
@@ -222,10 +375,17 @@ function Header () {
               </div>
             </div>
             <div class='headerclocknotifi'>00:40:05 GMT+7</div>
-
           </div>
         </div>
       </div>
+      <DangNhapLayout
+        isOpen={isModalDangnhap}
+        onClose={() => setisOpenModalDangNhap(false)}
+      />
+      <DangKyLayout
+        isOpen={isModalDangKy}
+        onClose={() => setIsOpenDangKy(false)}
+      />
     </div>
   )
 }
