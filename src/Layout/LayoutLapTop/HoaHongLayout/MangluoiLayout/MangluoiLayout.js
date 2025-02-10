@@ -1,5 +1,71 @@
-function MangluoiLayout() {
-    return ( <div>Mạng lưới</div> );
+import './MangluoiLayout.scss'
+import { useState } from 'react'
+function MangluoiLayout () {
+  const [date, setDate] = useState('')
+  const [type, setType] = useState('text')
+
+  return (
+    <div className='divtongquan_container'>
+      <div className='tongquan_header'>
+        <div className='tongquan_title'>
+          <img src='/images/hoahonggt.png' alt='' width={24} height={24} />
+          <div>Mạng lưới</div>
+        </div>
+        <div className='tongquan_descreption'>
+          Note: Lịch sử mạng lưới đội nhóm hiển thị doanh số của đội nhóm và
+          tính bằng USDT.
+        </div>
+      </div>
+      <div className='lichsu_body'>
+        <div className='mangluoi_header'>
+          <div>
+            <img src='/images/tien.png' alt='' width={30} height={30} />
+            <div className='lichsu_tien'>Giao dịch nhóm</div>
+            <div className='lichsu_tien'>0</div>
+          </div>
+          <div>
+            <img src='/images/tien.png' alt='' width={30} height={30} />
+            <div className='lichsu_tien'>Giao dịch cá nhân</div>
+            <div className='lichsu_tien'>0</div>
+          </div>
+        </div>
+
+        <div className='lichsu_footer'>
+          <div className='divhinhthuc'>
+            <span>Hình thức</span>
+            <div className='divinputdate'>
+              <input
+                type={type}
+                value={date}
+                onChange={e => setDate(e.target.value)}
+                onFocus={() => setType('date')}
+                onBlur={e => {
+                  if (!e.target.value) setType('text')
+                }}
+                placeholder='Select Date'
+              />
+            </div>
+          </div>
+          <div>
+            <table class='rebate-table'>
+              <thead>
+                <tr>
+                  <th>Tên người dùng - Cấp độ</th>
+                  <th>Hoa hồng</th>
+                  <th>Doanh số cá nhân</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colSpan={3}>không có dữ liệu</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-export default MangluoiLayout;
+export default MangluoiLayout
