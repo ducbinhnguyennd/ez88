@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Header.scss'
 import { DangNhapLayout } from '../../DangNhapLayout'
 import { useLocation } from 'react-router-dom'
@@ -8,11 +8,24 @@ import { DangKyLayout } from '../../DangKyLayout'
 function Header () {
   const [isModalDangnhap, setisOpenModalDangNhap] = useState(false)
   const [isModalDangKy, setIsOpenDangKy] = useState(false)
+  const [time, setTime] = useState('')
   const location = useLocation()
   const [isDangNhap, setIsDangNhap] = useState(
     sessionStorage.getItem('isDangNhap')
   )
 
+  useEffect(() => {
+    const updateClock = () => {
+      const now = new Date()
+      const options = { timeZone: 'Asia/Bangkok', hour12: false }
+      setTime(now.toLocaleTimeString('en-GB', options) + ' GMT+7')
+    }
+
+    updateClock()
+    const interval = setInterval(updateClock, 1000)
+
+    return () => clearInterval(interval) // Cleanup khi unmount
+  }, [])
 
   return (
     <div>
@@ -220,22 +233,22 @@ function Header () {
 
               <li>
                 <a
-                  href='/slots'
+                  href='/nohu'
                   className={`headeritem ${
-                    location.pathname === '/slots' ? 'active' : ''
+                    location.pathname === '/nohu' ? 'active' : ''
                   }`}
                 >
                   <img
                     width={24}
                     height={24}
                     src={
-                      location.pathname === '/slots'
+                      location.pathname === '/nohu'
                         ? '/images/slots2.webp'
                         : '/images/slots.webp'
                     }
                     alt=''
                   />
-                  <span>Slots</span>
+                  <span>Nổ hũ</span>
                 </a>
               </li>
 
@@ -262,43 +275,22 @@ function Header () {
 
               <li>
                 <a
-                  href='/xoso'
+                  href='/hoahong'
                   className={`headeritem ${
-                    location.pathname === '/xoso' ? 'active' : ''
+                    location.pathname === '/hoahong' ? 'active' : ''
                   }`}
                 >
                   <img
                     width={24}
                     height={24}
                     src={
-                      location.pathname === '/xoso'
-                        ? '/images/xoso2.webp'
-                        : '/images/xoso.webp'
-                    }
-                    alt=''
-                  />
-                  <span>Xổ số</span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href='/khuyenmai'
-                  className={`headeritem ${
-                    location.pathname === '/khuyenmai' ? 'active' : ''
-                  }`}
-                >
-                  <img
-                    width={24}
-                    height={24}
-                    src={
-                      location.pathname === '/khuyenmai'
+                      location.pathname === '/hoahong'
                         ? '/images/khuyenmai2.webp'
                         : '/images/khuyenmai.webp'
                     }
                     alt=''
                   />
-                  <span>Khuyến mãi</span>
+                  <span>Hoa hồng</span>
                 </a>
               </li>
             </ul>
@@ -374,7 +366,7 @@ function Header () {
                 </div>
               </div>
             </div>
-            <div class='headerclocknotifi'>00:40:05 GMT+7</div>
+            <div class='headerclocknotifi'>{time}</div>
           </div>
         </div>
       </div>

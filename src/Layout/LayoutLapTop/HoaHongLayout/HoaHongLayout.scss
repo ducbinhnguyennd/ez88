@@ -1,0 +1,55 @@
+.divhoahong_container {
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+
+
+.tab_list {
+    display: flex;
+    padding: 0 12px;
+    gap: 30px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+
+.tab_item {
+    cursor: pointer;
+    position: relative;
+    padding: 8px 0 10px;
+    color: #fff;
+
+    ::after {
+        width: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        height: 2px;
+        position: absolute;
+        transition: width .3s;
+        background-color: #89eb34;
+    }
+}
+
+.tab_item_active {
+    font-weight: 600;
+    color: #89eb34 !important;
+
+    ::after {
+        width: calc(100% - 15px);
+    }
+}
+
+.tab_itemtext {
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+
+}

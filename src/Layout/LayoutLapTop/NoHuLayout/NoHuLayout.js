@@ -1,10 +1,8 @@
-import './TheThaoLayout.scss'
-
-function TheThaoLayout () {
+function NoHuLayout () {
   return (
     <div className='bestgame_container'>
       <div className='titlesection_container'>
-        <p className='titlesection_name'>Thể thao</p>
+        <p className='titlesection_name'>Nổ hũ</p>
       </div>
       <div className='gridcolumn_container gridcolumn_col6 gridcolumn_sm'>
         <div className='gotogame_container'>
@@ -12,11 +10,11 @@ function TheThaoLayout () {
             <img
               width={200}
               height={200}
-              src='/images/saba.webp'
+              src='/images/pramaticplay.webp'
               alt=''
               className='cardgame_img'
             />
-            <div className='textthethao'>SABA Sports</div>
+            <div className='textthethao'>PragmaticPlay</div>
           </div>
         </div>
 
@@ -25,11 +23,11 @@ function TheThaoLayout () {
             <img
               width={200}
               height={200}
-              src='/images/bti.webp'
+              src='/images/cq9gaming.webp'
               alt=''
               className='cardgame_img'
             />
-            <div className='textthethao'>AFB Sports</div>
+            <div className='textthethao'>CQ9</div>
           </div>
         </div>
 
@@ -38,11 +36,11 @@ function TheThaoLayout () {
             <img
               width={200}
               height={200}
-              src='/images/panda.webp'
+              src='/images/microgaming.webp'
               alt=''
               className='cardgame_img'
             />
-            <div className='textthethao'>BTI Sports</div>
+            <div className='textthethao'>MicroGaming</div>
           </div>
         </div>
         <div className='gotogame_container'>
@@ -50,11 +48,11 @@ function TheThaoLayout () {
             <img
               width={200}
               height={200}
-              src='/images/afb.webp'
+              src='/images/tcgaming.webp'
               alt=''
               className='cardgame_img'
             />
-            <div className='textthethao'>PANDA Sports</div>
+            <div className='textthethao'>TCGaming</div>
           </div>
         </div>
 
@@ -63,11 +61,35 @@ function TheThaoLayout () {
             <img
               width={200}
               height={200}
-              src='/images/cockfight.webp'
+              src='/images/afbgaming.webp'
               alt=''
               className='cardgame_img'
             />
-            <div className='textthethao'>COCKFIGHT</div>
+            <div className='textthethao'>AFBGaming</div>
+          </div>
+        </div>
+        <div className='gotogame_container'>
+          <div className='cardgame_container'>
+            <img
+              width={200}
+              height={200}
+              src='/images/jiligaming.webp'
+              alt=''
+              className='cardgame_img'
+            />
+            <div className='textthethao'>JiLiGaming</div>
+          </div>
+        </div>
+        <div className='gotogame_container'>
+          <div className='cardgame_container'>
+            <img
+              width={200}
+              height={200}
+              src='/images/rich88.webp'
+              alt=''
+              className='cardgame_img'
+            />
+            <div className='textthethao'>Rich88</div>
           </div>
         </div>
       </div>
@@ -75,4 +97,4 @@ function TheThaoLayout () {
   )
 }
 
-export default TheThaoLayout
+export default NoHuLayout
