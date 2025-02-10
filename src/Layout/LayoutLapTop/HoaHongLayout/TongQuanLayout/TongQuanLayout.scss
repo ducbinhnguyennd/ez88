@@ -109,7 +109,8 @@
 .divbalance {
     border-right: 0.5px solid rgb(231, 231, 231);
 }
-.tongquan_footer{
+
+.tongquan_footer {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -119,14 +120,17 @@
     color: #fff;
     gap: 20px;
 }
-.tongquan_commisson{
+
+.tongquan_commisson {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
-.btnnhanngay{
-    background-image: linear-gradient(180deg, #99faa1, #89eb34) !important;
+
+.btnnhanngay {
+    background-image: linear-gradient(287deg, #89eb34 -19.12%, #89eb34 51.84%, #c0ff88 51.85%, #89eb34 102.06%);
+
     color: #fff;
     padding: 8px 20px;
     border-radius: 5px;
