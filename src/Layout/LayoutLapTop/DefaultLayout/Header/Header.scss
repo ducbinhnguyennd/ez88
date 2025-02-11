@@ -462,6 +462,7 @@ a {
     text-overflow: ellipsis;
     word-break: break-word;
 }
+
 .GroupLogged_groupText__Jz1OU span {
     display: block;
     text-align: right;
@@ -484,6 +485,7 @@ a {
 .GroupLogged_avatar__28Red {
     position: relative;
 }
+
 .Avatar_container__OtlQL {
     position: relative;
     height: 36px;
@@ -492,7 +494,8 @@ a {
     overflow: hidden;
     border: 2px solid #89eb34;
 }
-.san_avatar{
+
+.san_avatar {
     box-sizing: border-box;
     display: block;
     overflow: hidden;
@@ -506,7 +509,8 @@ a {
     position: absolute;
     inset: 0px;
 }
-.imgavatar{
+
+.imgavatar {
     position: absolute;
     inset: 0px;
     box-sizing: border-box;
@@ -522,7 +526,36 @@ a {
     max-height: 100%;
     object-fit: cover;
 }
+
 .GroupLogged_username__La8dz {
     color: #fff;
     font-weight: 600;
+}
+
+.menu-list {
+    list-style: none;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 10px;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 400;
+            color: #fff;
+        }
+    }
+}
+
+.tippy-content {
+    background-color: #1c1e22;
 }

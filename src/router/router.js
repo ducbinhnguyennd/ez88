@@ -12,6 +12,7 @@ import { NoHuLayout } from '../Layout/LayoutLapTop/NoHuLayout'
 import { NoHuLayoutMB } from '../Layout/LayoutMobile/NoHuLayoutMB'
 import { HoaHongLayout } from '../Layout/LayoutLapTop/HoaHongLayout'
 import { HoaHongLayoutMB } from '../Layout/LayoutMobile/HoaHongLayoutMB'
+import { ThongTinLayout } from '../Layout/LayoutLapTop/ThongTinLayout'
 const IsMobile = () => {
   return useMediaQuery({ query: '(max-width: 767px)' })
 }
@@ -51,14 +52,17 @@ const publicRoutes = [
       const isMobile = IsMobile()
       return isMobile ? <NoHuLayoutMB /> : <NoHuLayout />
     }
-  }
-  ,
+  },
   {
     path: '/hoahong',
     component: () => {
       const isMobile = IsMobile()
       return isMobile ? <HoaHongLayoutMB /> : <HoaHongLayout />
     }
+  },
+  {
+    path: '/thongtin',
+    component: ThongTinLayout
   }
 ]
 const privateRoutes = []
