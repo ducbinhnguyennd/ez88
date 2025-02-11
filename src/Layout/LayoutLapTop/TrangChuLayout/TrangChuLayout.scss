@@ -1,7 +1,7 @@
 .baseLayout_main {
     position: relative;
-    background-color: #1c1e22;
-    color: #fff;
+    background-color: var(--background-color);
+    color: var(--title-color);
 }
 
 .mainhome_container {
@@ -197,7 +197,7 @@
 
 .bestgame_container {
     padding-bottom: 32px;
-    color: #fff;
+    color: var(--title-color);
     width: 1200px;
     margin: 0 auto;
 }
@@ -216,7 +216,7 @@
     margin-right: auto;
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: var(--title-color);
 }
 
 @media (max-width: 1440px) {

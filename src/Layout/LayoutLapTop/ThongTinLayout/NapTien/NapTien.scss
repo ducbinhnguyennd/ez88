@@ -1,0 +1,45 @@
+.naptien_container {
+    margin-top: 10px;
+}
+
+.naptien_header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h3 {
+        color: #89eb34;
+    }
+}
+
+.qr_naptien {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.naptien_body {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.diachivi {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.divlinklienketvi {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid #3c404a;
+    padding: 10px;
+    border-radius: 10px;
+
+}

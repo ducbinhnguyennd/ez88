@@ -1,12 +1,15 @@
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { useState } from 'react'
 import './DefaultLayout.scss'
 function DefaultLayout ({ children }) {
+    const [isSang, setisSang] = useState(true)
+  
   return (
     <div className='baselayout_container'>
-      <Header />
+      <Header isSang={isSang} setisSang={setisSang}/>
       {children}
-      <Footer />
+      <Footer isSang={isSang}/>
     </div>
   )
 }

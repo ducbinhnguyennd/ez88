@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1c1e22;
+    background-color: var(--background-color);
     border-radius: 8px;
     gap: 8px;
 
@@ -59,7 +59,7 @@
         padding: 10.5px 12px;
         font-size: 14px;
         background-color: transparent;
-        color: #fff;
+        color: var(--title-color);
         border-radius: 5px;
 
         &:focus {
@@ -83,7 +83,7 @@
     button {
         padding: 10px;
         background-color: #89eb34;
-        color: #fff;
+        color: var(--title-color);
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -93,6 +93,6 @@
     .btnhuysua {
         background: #696969;
         border: 1px solid #696969;
-        color: #fff;
+        color: var(--title-color);
     }
 }

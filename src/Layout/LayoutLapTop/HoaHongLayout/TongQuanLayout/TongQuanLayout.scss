@@ -15,7 +15,7 @@
     column-gap: 8px;
     align-items: center;
     justify-content: flex-start;
-    color: #fff;
+    color: var(--title-color);
     font-weight: 500;
     font-size: 20px;
 }
@@ -24,7 +24,7 @@
     font-size: 15px;
     font-weight: 500;
     line-height: 16px;
-    color: #fff;
+    color: var(--title-color);
 }
 
 .tongquan_body {
@@ -60,7 +60,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: #fff;
+    color: var(--title-color);
     flex: 1;
 
     h2 {
@@ -91,7 +91,7 @@
     row-gap: 4px;
     align-items: center;
     flex-direction: column;
-    color: #fff;
+    color: var(--title-color);
 
     h3 {
         font-size: 16px;
@@ -117,7 +117,7 @@
     border: 1px solid rgb(231, 231, 231);
     margin-top: 20px;
     padding: 10px;
-    color: #fff;
+    color: var(--title-color);
     gap: 20px;
 }
 
@@ -131,7 +131,7 @@
 .btnnhanngay {
     background-image: linear-gradient(287deg, #89eb34 -19.12%, #89eb34 51.84%, #c0ff88 51.85%, #89eb34 102.06%);
 
-    color: #fff;
+    color: var(--title-color);
     padding: 8px 20px;
     border-radius: 5px;
     font-size: 20px;

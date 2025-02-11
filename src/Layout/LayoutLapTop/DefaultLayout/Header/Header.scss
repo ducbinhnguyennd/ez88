@@ -1,5 +1,5 @@
 .header {
-    background-color: #1c1e22;
+    background-color: var(--background-color);
 
 }
 
@@ -36,11 +36,11 @@
     display: grid;
     grid-template-columns: 24px 1fr;
     padding: 6px 12px;
-    color: #fff;
+    color: var(--title-color);
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    background-color: #2a2d34;
+    background-color: var(--standard-color);
     border-radius: 4px;
 }
 
@@ -73,7 +73,7 @@
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
-        background-color: #2a2d34;
+        background-color: var(--standard-color);
         overflow: hidden;
 
         .diviconsang {
@@ -94,7 +94,16 @@
                 display: block;
                 max-width: 100%;
             }
+
         }
+    }
+
+    .diviconsang.active {
+        opacity: 0;
+        top: -250%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
     }
 
     .divicontoi {
@@ -118,7 +127,7 @@
         }
     }
 
-    .divicontoi.active {
+    .divicontoi.activetoi {
         opacity: 1;
         top: 50%;
         left: 50%;
@@ -182,7 +191,7 @@
 
 .Button_btn__z_3IU {
     text-decoration: none;
-    color: #fff;
+    color: var(--title-color);
     padding: 12px 24px;
     transition: .2s;
     font-size: 14px;
@@ -214,7 +223,7 @@
 }
 
 .Button_primaryLight__xb5yf {
-    color: #fff;
+    color: var(--title-color);
     background: linear-gradient(287deg, #89eb34 -19.12%, #89eb34 51.84%, #c0ff88 51.85%, #89eb34 102.06%);
 }
 
@@ -262,7 +271,7 @@ a {
 }
 
 .active {
-    color: #fff;
+    color: var(--title-color);
     background-color: #3c404a;
 }
 
@@ -326,7 +335,7 @@ a {
 }
 
 .headernotifi {
-    background-color: #111415;
+    background-color: var(--shadow-color);
     height: 40px;
     display: flex;
     align-items: center;
@@ -357,7 +366,7 @@ a {
         font-size: 20px;
         position: relative;
         z-index: 100;
-        background-color: #111415;
+        background-color: var(--shadow-color);
         padding-right: 6px;
     }
 
@@ -454,7 +463,7 @@ a {
 
 .GroupLogged_groupText__Jz1OU .GroupLogged_coin__cQg_b {
     font-weight: 600;
-    color: #fff;
+    color: var(--title-color);
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -528,7 +537,7 @@ a {
 }
 
 .GroupLogged_username__La8dz {
-    color: #fff;
+    color: var(--title-color);
     font-weight: 600;
 }
 
@@ -543,15 +552,16 @@ a {
         font-size: 15px;
         font-weight: 400;
         padding: 10px;
-        color: #fff;
-        &:hover{
-            background-color: #111415;
+        color: var(--title-color);
+
+        &:hover {
+            background-color: var(--shadow-color);
             color: #89eb34 !important;
         }
     }
 }
 
 .tippy-content {
-    background-color: #1c1e22;
+    background-color: var(--background-color);
     padding: 0 !important;
 }

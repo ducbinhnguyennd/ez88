@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Footer.scss'
-function Footer () {
+function Footer ({ isSang }) {
   return (
     <div className='footer_container'>
       <div className='gameProvider_container_footer'>
@@ -175,7 +175,7 @@ function Footer () {
           <div>
             <div>
               <img
-                src='/images/logo2.webp'
+                src={isSang ? '/images/logo2.webp' : '/images/logo3.webp'}
                 alt=''
                 width={140}
                 height={40}

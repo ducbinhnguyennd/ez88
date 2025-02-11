@@ -29,7 +29,7 @@ input[type=radio]:checked:before {
     top: 4px;
     width: 6px;
     height: 8px;
-    border: solid #fff;
+    border: solid var(--title-color);
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
@@ -62,7 +62,7 @@ input[type=radio]:checked:after {
     user-select: none;
     border-radius: 4px;
     background: linear-gradient(180deg, #71d434, #2e9124), linear-gradient(180deg, #be3aec, #9f26c9);
-    color: #fff;
+    color: var(--title-color);
 }
 
 .FormSignup_help__eYvaQ {

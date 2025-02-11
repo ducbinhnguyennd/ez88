@@ -8,7 +8,7 @@ import { DangKyLayout } from '../../DangKyLayout'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 
-function Header () {
+function Header ({isSang, setisSang}) {
   const [isModalDangnhap, setisOpenModalDangNhap] = useState(false)
   const [isModalDangKy, setIsOpenDangKy] = useState(false)
   const [time, setTime] = useState('')
@@ -31,6 +31,28 @@ function Header () {
 
     return () => clearInterval(interval) // Cleanup khi unmount
   }, [])
+  useEffect(() => {
+    if (isSang) {
+      // Chuyển sang màu sáng
+      document.documentElement.style.setProperty('--standard-color', '#2a2d34')
+      document.documentElement.style.setProperty('--title-color', '#fff')
+      document.documentElement.style.setProperty(
+        '--background-color',
+        '#1c1e22'
+      )
+      document.documentElement.style.setProperty('--shadow-color', '#111415')
+    } else {
+      document.documentElement.style.setProperty('--standard-color', '#ffffff')
+      document.documentElement.style.setProperty('--title-color', '#2a2d34')
+      document.documentElement.style.setProperty(
+        '--background-color',
+        '#f6f7fa'
+      )
+      document.documentElement.style.setProperty('--shadow-color', '#eaecf3')
+
+      // Chuyển lại màu tối
+    }
+  }, [isSang])
 
   return (
     <div>
@@ -47,8 +69,8 @@ function Header () {
               Tiếng Việt
             </div>
             <div className='divsangtoi'>
-              <div className='divsang'>
-                <div className='diviconsang'>
+              <div className='divsang' onClick={() => setisSang(!isSang)}>
+                <div className={`diviconsang ${isSang ? '' : 'active'}`}>
                   <svg
                     stroke='currentColor'
                     fill='currentColor'
@@ -61,7 +83,7 @@ function Header () {
                     <path d='M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z'></path>
                   </svg>
                 </div>
-                <div className='divicontoi'>
+                <div className={`divicontoi ${!isSang ? 'activetoi' : ''}`}>
                   <svg
                     stroke='currentColor'
                     fill='currentColor'

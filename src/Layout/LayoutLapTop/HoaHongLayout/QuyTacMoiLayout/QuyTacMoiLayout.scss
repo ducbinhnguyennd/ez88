@@ -10,12 +10,12 @@
     display: flex;
     flex-direction: column;
     /* Để nội dung xổ xuống theo chiều dọc */
-    color: #fff;
+    color: var(--title-color);
     align-items: center;
     justify-content: space-between;
     width: 500px;
     padding: 10px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--title-color);
 }
 
 .divlevel1 {

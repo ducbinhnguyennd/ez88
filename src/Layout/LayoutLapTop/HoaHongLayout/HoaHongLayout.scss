@@ -23,7 +23,7 @@
     cursor: pointer;
     position: relative;
     padding: 8px 0 10px;
-    color: #fff;
+    color: var(--title-color);
 
     ::after {
         width: 0;

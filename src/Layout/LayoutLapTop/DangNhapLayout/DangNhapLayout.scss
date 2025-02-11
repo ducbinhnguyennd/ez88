@@ -51,7 +51,7 @@
 
 .formauth_container {
     width: 620px;
-    background-color: #fff;
+    background-color: var(--title-color);
     min-height: 400px;
     border-radius: 12px;
     display: grid;
@@ -217,7 +217,7 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: #fff;
+    background: var(--title-color);
     box-shadow: 0 0 1px rgba(40, 41, 61, .08),
         0 .5px 2px rgba(96, 97, 112, .16);
     transition: .2s;
@@ -249,7 +249,7 @@
 
 .Button_primary__8ZICM {
     background: #89eb34;
-    color: #fff;
+    color: var(--title-color);
 }
 
 .FormLogin_note__3xgzD {
