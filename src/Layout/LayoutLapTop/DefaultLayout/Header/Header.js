@@ -8,7 +8,7 @@ import { DangKyLayout } from '../../DangKyLayout'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 
-function Header ({isSang, setisSang}) {
+function Header ({ isSang, setisSang }) {
   const [isModalDangnhap, setisOpenModalDangNhap] = useState(false)
   const [isModalDangKy, setIsOpenDangKy] = useState(false)
   const [time, setTime] = useState('')
@@ -41,6 +41,10 @@ function Header ({isSang, setisSang}) {
         '#1c1e22'
       )
       document.documentElement.style.setProperty('--shadow-color', '#111415')
+      document.documentElement.style.setProperty(
+        '--icon-menu-active-3',
+        'linear-gradient(180deg, #4b4e4e, #303537)'
+      )
     } else {
       document.documentElement.style.setProperty('--standard-color', '#ffffff')
       document.documentElement.style.setProperty('--title-color', '#2a2d34')
@@ -49,6 +53,10 @@ function Header ({isSang, setisSang}) {
         '#f6f7fa'
       )
       document.documentElement.style.setProperty('--shadow-color', '#eaecf3')
+      document.documentElement.style.setProperty(
+        '--icon-menu-active-3',
+        '#dddfe7'
+      )
 
       // Chuyển lại màu tối
     }

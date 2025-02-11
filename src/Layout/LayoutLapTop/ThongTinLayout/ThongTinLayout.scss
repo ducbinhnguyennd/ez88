@@ -132,12 +132,11 @@
     color: #98a7b5;
     border-radius: 8px;
     cursor: pointer;
-    background: linear-gradient(180deg, #4b4e4e, #303537),
-        var(--shadow-color);
+    background: var(--icon-menu-active-3);
 }
 
 .menuprofile_wallet_item_active {
-    color: var(--title-color) !important;
+    color: #fff !important;
 }
 
 .menuprofile_list {
@@ -162,7 +161,7 @@
 
 .menulist_item_active {
     background-color: #3c404a !important;
-    color: var(--title-color);
+    color: #fff;
     cursor: default;
 }
 
