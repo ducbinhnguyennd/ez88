@@ -543,19 +543,15 @@ a {
         font-size: 15px;
         font-weight: 400;
         padding: 10px;
-
-        a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 400;
-            color: #fff;
+        color: #fff;
+        &:hover{
+            background-color: #111415;
+            color: #89eb34 !important;
         }
     }
 }
 
 .tippy-content {
     background-color: #1c1e22;
+    padding: 0 !important;
 }
