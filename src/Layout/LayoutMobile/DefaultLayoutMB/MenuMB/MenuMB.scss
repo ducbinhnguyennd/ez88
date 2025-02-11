@@ -1,0 +1,48 @@
+.menumb_container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--page-shadow);
+    z-index: 100;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px
+}
+
+.menumb_container.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.menumb_header_tong{
+    max-width: max(min(100% - 128px, 90vw), 1400px);
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 100%;
+    display: block;
+}
+.menumb_header{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 20px;
+    
+}
+.Button_hight_light__1zxVb {
+    background-color: var(--standard-color);
+    border: 0;
+    color: var(--green);
+}
+.MenuMobile_text_color__DIsiN {
+    color: var(--title-color) !important;
+}
+.menumb_header>:nth-child(3) {
+    width: 93.94px;
+    max-width: 93.94px;
+    min-width: 93.94px;
+}

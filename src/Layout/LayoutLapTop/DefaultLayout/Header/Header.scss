@@ -565,3 +565,24 @@ a {
     background-color: var(--background-color);
     padding: 0 !important;
 }
+
+@media screen and (max-width: 768px) {
+    .headermainnotifi {
+        grid-template-columns: unset !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .divTieng {
+        padding: 6px !important;
+        gap: 6px;
+        height: 100%;
+        align-items: unset !important;
+    }
+
+    .divsangtoi .divsang {
+        width: 40px;
+        height: 40px;
+    }
+
+}
