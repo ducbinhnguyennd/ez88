@@ -59,7 +59,7 @@ function GioiThieuLayout () {
           <div className='formgioithieu_button_icon'>
             <svg height='40' width='40' viewBox='0 0 29 29'>
               <path
-                fill='var(--title-color)FFF'
+                fill='var(--title-color)'
                 d='M0,0 h29v29H0z'
                 shape-rendering='crispEdges'
               ></path>
@@ -87,7 +87,7 @@ function GioiThieuLayout () {
           <div className='formgioithieu_button_icon'>
             <svg height='40' width='40' viewBox='0 0 29 29'>
               <path
-                fill='var(--title-color)FFF'
+                fill='var(--title-color)'
                 d='M0,0 h29v29H0z'
                 shape-rendering='crispEdges'
               ></path>

@@ -1,15 +1,17 @@
 import { HeaderMB } from './HeaderMB'
 import { FooterMB } from './FooterMB'
 import { MenuMB } from './MenuMB'
-import {useState} from 'react'
+import { useState } from 'react'
 function DefaultLayoutMB ({ children }) {
-    const [activemenu,setactivemenu] = useState(false)
+  const [activemenu, setactivemenu] = useState(false)
   return (
-    <div>
+    <div className='baselayout_container'>
       <HeaderMB />
-      <MenuMB activemenu={activemenu} setactivemenu={setactivemenu}/>
+
+      <MenuMB activemenu={activemenu} setactivemenu={setactivemenu} />
+
+      <FooterMB activemenu={activemenu} setactivemenu={setactivemenu} />
       {children}
-      <FooterMB activemenu={activemenu} setactivemenu={setactivemenu}/>
     </div>
   )
 }

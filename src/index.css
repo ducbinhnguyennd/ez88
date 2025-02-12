@@ -26,5 +26,21 @@ html {
   --title-color: #fff;
   --grey: #98a7b5;
   --page-shadow: #111415;
-  --green: #4ad325
+  --green: #4ad325;
+  --menu-height-mobile: 50px;
+  --header-height: 64px;
+  --menu-height: 56px;
+  --noti-height: 40px;
+  --sidebar-width: 256px;
+  --sidebar-width-hidden: 56px;
+  --bg-menu-home: radial-gradient(
+    69.64% 66.18% at 50% 33.82%,
+    #6a6a6a 0%,
+    #373737 59.26%,
+    #262626 100%
+  );
+  --p: 12px;
+  --gap: 12px;
+  --w-menu: 64px;
+  --h-sub-menu: 28px;
 }

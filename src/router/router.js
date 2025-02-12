@@ -55,10 +55,7 @@ const publicRoutes = [
   },
   {
     path: '/hoahong',
-    component: () => {
-      const isMobile = IsMobile()
-      return isMobile ? <HoaHongLayoutMB /> : <HoaHongLayout />
-    }
+    component: HoaHongLayout
   },
   {
     path: '/thongtin',
