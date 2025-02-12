@@ -36,7 +36,7 @@ function LichSuLayout () {
                 onBlur={e => {
                   if (!e.target.value) setType('text')
                 }}
-                placeholder='Start Date'
+                placeholder={type=== 'text'?'Start Date':'dd/mm/yyyy'}
               />
               <svg
                 viewBox='0 0 1024 1024'
@@ -57,7 +57,7 @@ function LichSuLayout () {
                 onBlur={e => {
                   if (!e.target.value) setType('text')
                 }}
-                placeholder='End Date'
+                placeholder={type=== 'text'?'End Date':'dd/mm/yyyy'}
               />
               <svg
                 viewBox='64 64 896 896'

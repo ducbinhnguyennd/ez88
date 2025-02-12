@@ -42,7 +42,7 @@ function MangluoiLayout () {
                 onBlur={e => {
                   if (!e.target.value) setType('text')
                 }}
-                placeholder='Select Date'
+                placeholder={type=== 'text'?'Select Date':'dd/mm/yyyy'}
               />
             </div>
           </div>
