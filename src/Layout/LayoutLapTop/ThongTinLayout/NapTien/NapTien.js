@@ -10,7 +10,7 @@ function NapTien () {
         <div className='qr_naptien'>
           <svg height='200' width='200' viewBox='0 0 29 29'>
             <path
-              fill='var(--title-color)FFF'
+              fill='var(--title-color)'
               d='M0,0 h29v29H0z'
               shape-rendering='crispEdges'
             ></path>
