@@ -51,6 +51,20 @@ function RutTien () {
         <span>USDT</span>
       </div>
       <button className='btnruttien'>Thực hiện</button>
+
+      <div className='divvitienchuy'>
+        <span>Chú ý:</span>
+        <ul>
+          <li>Nhập đúng số tài khoản, tên chủ tài khoản</li>
+          <li>Các giao dịch sai tên tài khoản sẽ k được hoàn tiền</li>
+          <li>Sau khi rút xin đợi 1 khoảng thời gian để xử lý</li>
+          <li>
+            Để đảm bảo quyền lợi của mình , hội viên vui lòng sử dụng tài khoản
+            ngân hàng chính chủ để giao dịch với hệ thống . không liên kết 1 tài
+            khoản ngân hàng cho 2 hoặc nhiều tài khoản game .
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }

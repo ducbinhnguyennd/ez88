@@ -218,7 +218,7 @@ function DoiMatKhau () {
           </label>
           <div className='doimatkhaucn_btn'>
             <button className='Button_container__By3IT Button_maxContent__29WwM'>
-              <div className='Button_primary__8ZICM Button_bold__oPRj9 Button_rounded_8__qPlL4 Button_maxContent__29WwM Button_btn__z_3IU'>
+              <div className='Button_primary__8ZICM Button_bold__oPRj9 Button_rounded_8__qPlL4 Button_maxContent__29WwM Button_btn__z_3IU BTN_mobile'>
                 <div className='Button_text__FcN3u'>Xác nhận</div>
               </div>
             </button>

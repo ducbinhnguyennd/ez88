@@ -16,25 +16,31 @@ function ThongTinLayoutMB () {
   const wallet = [
     {
       img: '/images/vitien.svg',
-      name: 'Ví tiền'
+      name: 'Ví tiền',
+      link:'/vitien'
     },
     {
       img: '/images/naptien.svg',
-      name: 'Nạp tiền'
+      name: 'Nạp tiền',
+      link: '/naptien'
+
     },
     {
       img: '/images/ruttien.svg',
-      name: 'Rút tiền'
+      name: 'Rút tiền',
+      link: '/ruttien'
     }
   ]
   const tabs = [
     {
       img: '/images/thongtincn.svg',
-      name: 'Thông tin cá nhân'
+      name: 'Thông tin cá nhân',
+      link: '/thongtincanhan'
     },
     {
       img: '/images/lichsucuoc.svg',
-      name: 'Lịch sử cược'
+      name: 'Lịch sử cược',
+      link:'/lichsucuoc'
     }
   ]
 
@@ -72,7 +78,7 @@ function ThongTinLayoutMB () {
               <div className='menuprofile_wallet'>
                 {wallet.map((item, index) => (
                   <a
-                    href={`/thongtin?tab=${item.name}`}
+                    href={item.link}
                     className={`menuprofile_wallet_item ${
                       activeTab === item.name
                         ? 'menuprofile_wallet_item_active'
@@ -89,7 +95,7 @@ function ThongTinLayoutMB () {
             <div></div>
             <div className='menuprofile_list'>
               {tabs.map((tab, index) => (
-                <a href={`/thongtin?tab=${tab.name}`}>
+                <a href={tab.link}>
                   <div
                     className={`menulist_item ${
                       activeTab === tab.name ? 'menulist_item_active' : ''
@@ -108,7 +114,7 @@ function ThongTinLayoutMB () {
                   </div>
                 </a>
               ))}
-              <a href='/hoahong'>
+              {/* <a href='/hoahong'>
                 <div className={`menulist_item`}>
                   <img
                     src='/images/khuyenmai.webp'
@@ -119,7 +125,7 @@ function ThongTinLayoutMB () {
                   />
                   <span>Hoa hồng</span>
                 </div>
-              </a>
+              </a> */}
               <div className={`menulist_item`} onClick={()=>setIsOpenDangXuat(true)}>
                 <img
                   src='/images/dangxuat.svg'

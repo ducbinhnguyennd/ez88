@@ -9,7 +9,7 @@ function ThongTinCaNhan () {
   const tabs = ['Tài khoản', 'Đổi mật khẩu', 'Đổi mã pin']
   return (
     <div className='thongtincanhan_container'>
-      <div>
+      <div className='mainaccount'>
         <div className='mainaccount_title'>Thông tin cá nhân</div>
         <div className='mainaccount_tab'>
           {tabs.map((tab, index) => (

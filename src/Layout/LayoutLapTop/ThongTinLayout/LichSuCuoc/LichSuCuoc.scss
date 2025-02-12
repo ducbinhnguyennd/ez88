@@ -61,3 +61,19 @@
     padding: 10px;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 768px) {
+    .lichsucuoc_container{
+        color: var(--title-color);
+        min-height: 100dvh;
+        padding: 10px;
+    }
+    .divdatemethod{
+        display: unset !important;
+    }
+    .wallet_method{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    
+}

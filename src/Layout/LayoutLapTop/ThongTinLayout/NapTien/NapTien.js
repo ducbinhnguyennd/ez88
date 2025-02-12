@@ -1,5 +1,22 @@
 import './NapTien.scss'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 function NapTien () {
+  const handleCopy = text => {
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      toast.success('Sao chép thành công!', {
+        position: 'top-center',
+        autoClose: 2000 // Ẩn sau 2 giây
+      })
+    })
+    .catch(() => {
+      toast.error('Sao chép thất bại, vui lòng thử lại!')
+    })
+}
+
   return (
     <div className='naptien_container'>
       <div className='naptien_header'>
@@ -10,7 +27,7 @@ function NapTien () {
         <div className='qr_naptien'>
           <svg height='200' width='200' viewBox='0 0 29 29'>
             <path
-              fill='var(--title-color)'
+              fill='#FFFFFFFF'
               d='M0,0 h29v29H0z'
               shape-rendering='crispEdges'
             ></path>
@@ -25,6 +42,7 @@ function NapTien () {
           <span>Địa chỉ ví USDT-BEP20:</span>
           <div className='divlinklienketvi'>
             <span>0xfb150a126ecab93d05dd0af5dcbce1fe815578d1</span>
+            <div onClick={()=>handleCopy('0xfb150a126ecab93d05dd0af5dcbce1fe815578d1')}>
             <svg
               stroke='currentColor'
               fill='currentColor'
@@ -36,8 +54,25 @@ function NapTien () {
             >
               <path d='M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6ZM6.9998 11V13H12.9998V11H6.9998ZM6.9998 15V17H12.9998V15H6.9998Z'></path>
             </svg>
+            </div>
           </div>
         </div>
+      </div>
+      <div className='divvitienchuy'>
+        <span>Quy định:</span>
+        <ul>
+          <li>Giới hạn số tiền tùy theo ngân hàng đang sử dụng</li>
+          <li>Mỗi lần giao dịch chỉ được thực hiện 1 lần duy nhất</li>
+          <li>Giao dịch trong thời gian quy định</li>
+          <li>Trong trường hợp khác ngân hàng chỉ nhận giao dịch nhanh 24/7</li>
+          <li>Phí người chuyển trả</li>
+
+          <li>
+            Kiểm tra đúng số tài khoản, nội dung, số tiền trước khi giao dịch
+          </li>
+
+          <li>Các giao dịch sai thông tin sẽ không được hoàn trả</li>
+        </ul>
       </div>
     </div>
   )

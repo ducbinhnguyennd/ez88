@@ -33,7 +33,7 @@ function TaiKhoan () {
       <h3>Mạng xã hội</h3>
       <div className='taikhoancn_item'>
         <span className='spanemail'>
-          <div style={{ width: '100px' }}>Email:</div>
+          <div className = 'divspanemail'>Email:</div>
           <input type='text' readOnly={!isSuaEmail} />
         </span>
         <span className='btnthuchien'>
@@ -46,7 +46,7 @@ function TaiKhoan () {
       </div>
       <div className='taikhoancn_item'>
         <span className='spanemail'>
-          <div style={{ width: '100px' }}>Telegram:</div>
+          <div className='divspanemail'>Telegram:</div>
           <input type='text' readOnly={!isSuaTelegram} />
         </span>
         <span className='btnthuchien'>

@@ -1,5 +1,22 @@
 import './GioiThieuLayout.scss'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 function GioiThieuLayout () {
+  const handleCopy = text => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        toast.success('Sao chép thành công!', {
+          position: 'top-center',
+          autoClose: 2000 // Ẩn sau 2 giây
+        })
+      })
+      .catch(() => {
+        toast.error('Sao chép thất bại, vui lòng thử lại!')
+      })
+  }
+
   return (
     <div className='divtongquan_container'>
       <div className='tongquan_header'>
@@ -40,7 +57,7 @@ function GioiThieuLayout () {
           <label htmlFor=''>Mã giới thiệu</label>
           <div className='formgioithieu_input'>
             <input type='text' value={'SGF93IWV'} readOnly />
-            <span>Sao chép</span>
+            <span onClick={() => handleCopy('SGF93IWV')}>Sao chép</span>
           </div>
         </div>
         <div className='formgioithieu'>
@@ -51,7 +68,7 @@ function GioiThieuLayout () {
               value={'https://www.fnk88.club/auth/register?reff=SGF93IWV'}
               readOnly
             />
-            <span>Sao chép link</span>
+            <span onClick={() => handleCopy('https://www.fnk88.club/auth/register?reff=SGF93IWV')}>Sao chép link</span>
           </div>
         </div>
         <div className='formgioithieu_button'>
@@ -59,7 +76,7 @@ function GioiThieuLayout () {
           <div className='formgioithieu_button_icon'>
             <svg height='40' width='40' viewBox='0 0 29 29'>
               <path
-                fill='var(--title-color)'
+                fill='#FFFFFFFF'
                 d='M0,0 h29v29H0z'
                 shape-rendering='crispEdges'
               ></path>
@@ -79,7 +96,7 @@ function GioiThieuLayout () {
               value={'https://t.me/fnk88_play_bot?start=reff=SGF93IWV'}
               readOnly
             />
-            <span>Sao chép link</span>
+            <span onClick={() => handleCopy('https://t.me/fnk88_play_bot?start=reff=SGF93IWV')}>Sao chép link</span>
           </div>
         </div>
         <div className='formgioithieu_button'>
@@ -87,7 +104,7 @@ function GioiThieuLayout () {
           <div className='formgioithieu_button_icon'>
             <svg height='40' width='40' viewBox='0 0 29 29'>
               <path
-                fill='var(--title-color)'
+                fill='#FFFFFFFF'
                 d='M0,0 h29v29H0z'
                 shape-rendering='crispEdges'
               ></path>

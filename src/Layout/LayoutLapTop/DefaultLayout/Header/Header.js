@@ -61,6 +61,7 @@ function Header ({ isSang, setisSang }) {
         '--icon-menu-active-3',
         'linear-gradient(180deg, #4b4e4e, #303537)'
       )
+      localStorage.setItem('theme', 'light')
     } else {
       document.documentElement.style.setProperty('--standard-color', '#ffffff')
       document.documentElement.style.setProperty('--title-color', '#2a2d34')
@@ -73,10 +74,20 @@ function Header ({ isSang, setisSang }) {
         '--icon-menu-active-3',
         '#dddfe7'
       )
+      localStorage.setItem('theme', 'dark')
 
       // Chuyển lại màu tối
     }
   }, [isSang])
+
+  const handelhoahong = e => {
+    e.preventDefault()
+    if (!sessionStorage.getItem('isDangNhap')) {
+      setisOpenModalDangNhap(true)
+      return
+    }
+    window.location.href = '/hoahong'
+  }
 
   return (
     <div>
@@ -409,10 +420,10 @@ function Header ({ isSang, setisSang }) {
 
               <li>
                 <a
-                  href='/hoahong'
                   className={`headeritem ${
                     location.pathname === '/hoahong' ? 'active' : ''
                   }`}
+                  onClick={e => handelhoahong(e)}
                 >
                   <img
                     width={24}

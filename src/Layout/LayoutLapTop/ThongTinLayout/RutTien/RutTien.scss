@@ -80,3 +80,10 @@
     font-weight: 600;
     margin-top: 20px;
 }
+ @media screen and (max-width: 768px) {
+    .ruttien_container{
+        color: var(--title-color);
+        min-height: 100dvh;
+        padding: 10px;
+    }
+ }

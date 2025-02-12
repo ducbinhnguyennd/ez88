@@ -41,3 +41,13 @@
     color: var(--title-color);
     background: linear-gradient(180deg, #b3fc74, #89eb34);
 }
+
+@media screen and (max-width: 768px) {
+    .thongtincanhan_container{
+        min-height: 100dvh;
+        color: var(--title-color);
+        background-color: var(--standard-color);
+        padding: 10px;
+    }
+
+}

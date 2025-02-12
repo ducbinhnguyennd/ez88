@@ -75,3 +75,8 @@
 .Button_bold__oPRj9 {
     font-weight: 600;
 }
+@media screen and (max-width: 768px) {
+    .BTN_mobile{
+        width: 100% !important;
+    }
+}
