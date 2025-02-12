@@ -52,7 +52,7 @@ function TrangChuLayout () {
           </div>
           <div className='mainhome_mb'>
             <div className='gamecontainer-row gameinfo-row'>
-              <div className='GameInfo_providerGame__fsnbd GameInfo_col__Gj7YL GameInfo_col_md_3__yol49 GameInfo_col_6__8nO0O'>
+              <a href='/casino' className='GameInfo_providerGame__fsnbd GameInfo_col__Gj7YL GameInfo_col_md_3__yol49 GameInfo_col_6__8nO0O'>
                 <div className='GameInfo_img_game__kyl3x'>
                   <img
                     src='/images/back_casino.webp'
@@ -70,9 +70,9 @@ function TrangChuLayout () {
                   </div>
                   <p>CASINO</p>
                 </div>
-              </div>
+              </a>
 
-              <div className='GameInfo_providerGame__fsnbd GameInfo_col__Gj7YL GameInfo_col_md_3__yol49 GameInfo_col_6__8nO0O'>
+              <a href='/thethao' className='GameInfo_providerGame__fsnbd GameInfo_col__Gj7YL GameInfo_col_md_3__yol49 GameInfo_col_6__8nO0O'>
                 <div className='GameInfo_img_game__kyl3x'>
                   <img
                     src='/images/back_thethao.webp'
@@ -90,10 +90,10 @@ function TrangChuLayout () {
                   </div>
                   <p>THỂ THAO</p>
                 </div>
-              </div>
+              </a>
               <div className='GameInfo_col__Gj7YL GameInfo_col_md_6__fVYEq GameInfo_col_12__oLS15 GameInfo_mobi_padding__HvS2T'>
                 <div className='GameInfo_row__2NqhN GameInfo_h_100__60W_4 GameInfo_row_gap_10__QpOsg'>
-                  <div className='GameInfo_providerGame__fsnbd GameInfo_col__Gj7YL GameInfo_col_md_6__fVYEq GameInfo_col_6__8nO0O'>
+                  <a href='/nohu' className='GameInfo_providerGame__fsnbd GameInfo_col__Gj7YL GameInfo_col_md_6__fVYEq GameInfo_col_6__8nO0O'>
                     <div className='GameInfo_img_game__kyl3x'>
                       <img
                         src='/images/back_slot.webp'
@@ -109,10 +109,10 @@ function TrangChuLayout () {
                           className='img-full'
                         />
                       </div>
-                      <p>SLOT</p>
+                      <p>NỔ HŨ</p>
                     </div>
-                  </div>
-                  <div className='GameInfo_providerGame__fsnbd GameInfo_col__Gj7YL GameInfo_col_md_6__fVYEq GameInfo_col_6__8nO0O'>
+                  </a>
+                  <a href='/banca' className='GameInfo_providerGame__fsnbd GameInfo_col__Gj7YL GameInfo_col_md_6__fVYEq GameInfo_col_6__8nO0O'>
                     <div className='GameInfo_img_game__kyl3x'>
                       <img
                         src='/images/back_banca.webp'
@@ -130,7 +130,7 @@ function TrangChuLayout () {
                       </div>
                       <p>BẮN CÁ</p>
                     </div>
-                  </div>
+                  </a>
                   <div className='GameInfo_providerGame__fsnbd GameInfo_col__Gj7YL GameInfo_col_md_6__fVYEq GameInfo_col_6__8nO0O'>
                     <div className='GameInfo_img_game__kyl3x'>
                       <img
