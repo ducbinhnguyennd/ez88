@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useEffect } from 'react'
@@ -5,20 +6,35 @@ import './Header.scss'
 import { DangNhapLayout } from '../../DangNhapLayout'
 import { useLocation } from 'react-router-dom'
 import { DangKyLayout } from '../../DangKyLayout'
+import { DangXuatLayout } from '../../../LayoutMobile/DangXuatLayout'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 
 function Header ({ isSang, setisSang }) {
   const [isModalDangnhap, setisOpenModalDangNhap] = useState(false)
   const [isModalDangKy, setIsOpenDangKy] = useState(false)
+  const [isModalDangXuat, setIsOpenDangXuat] = useState(false)
+
   const [time, setTime] = useState('')
   const location = useLocation()
   const [visible, setVisible] = useState(false)
+  const [visiblmethod, setvisiblemethod] = useState(false)
+  const [imageusd, setimageusd] = useState('/images/vnd.webp')
 
   const [isDangNhap, setIsDangNhap] = useState(
     sessionStorage.getItem('isDangNhap')
   )
 
+  const methodusd = [
+    {
+      img: '/images/vnd.webp',
+      name: 'VND'
+    },
+    {
+      img: '/images/usdt.svg',
+      name: 'USDT'
+    }
+  ]
   useEffect(() => {
     const updateClock = () => {
       const now = new Date()
@@ -110,27 +126,62 @@ function Header ({ isSang, setisSang }) {
           {isDangNhap ? (
             <div className='GroupControlHeader_group_chat__ZQeHs'>
               <div className='GroupLogged_container__r_YCs'>
-                <div className='GroupLogged_groupText__Jz1OU'>
-                  <img src='/images/USD.webp' alt='' width={22} height={22} />
-                  <span class='GroupLogged_coin__cQg_b' id='coin'>
-                    0
-                  </span>
-                  <svg
-                    stroke='currentColor'
-                    fill='currentColor'
-                    stroke-width='0'
-                    viewBox='0 0 512 512'
-                    color='var(--text-color)'
-                    height='1em'
-                    width='1em'
-                    xmlns='http://www.w3.org/2000/svg'
-                    style={{ color: '#98a7b5' }}
+                <Tippy
+                  content={
+                    <div className='menu-container'>
+                      <ul className='menu-list'>
+                        {methodusd.map((method, index) => (
+                          <li
+                            key={index}
+                            onClick={() => setimageusd(method.img)}
+                          >
+                            <div className='divmethodusd'>
+                              <img
+                                src={`${method.img}`}
+                                width={24}
+                                height={24}
+                              />
+                              {method.name}
+                            </div>
+
+                            <div className='divmethodsotien'>
+                              <span>0</span>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  }
+                  visible={visiblmethod}
+                  interactive={true}
+                  onClickOutside={() => setvisiblemethod(false)}
+                >
+                  <div
+                    className='GroupLogged_groupText__Jz1OU'
+                    onClick={() => setvisiblemethod(!visiblmethod)}
                   >
-                    <path d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'></path>
-                  </svg>
-                </div>
+                    <img src={`${imageusd}`} alt='' width={22} height={22} />
+                    <span class='GroupLogged_coin__cQg_b' id='coin'>
+                      0
+                    </span>
+                    <svg
+                      stroke='currentColor'
+                      fill='currentColor'
+                      stroke-width='0'
+                      viewBox='0 0 512 512'
+                      color='var(--text-color)'
+                      height='1em'
+                      width='1em'
+                      xmlns='http://www.w3.org/2000/svg'
+                      style={{ color: '#98a7b5' }}
+                    >
+                      <path d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'></path>
+                    </svg>
+                  </div>
+                </Tippy>
+
                 <a
-                  href=''
+                  href='/thongtin?tab=Nạp tiền'
                   className='Button_container__By3IT Button_maxContent__29WwM'
                 >
                   <div className='Button_primaryLight__xb5yf Button_maxContent__29WwM Button_small__ZiSjz Button_rounded_6__tsqKR Button_p_6_12__yWNI_ Button_btn__z_3IU'>
@@ -162,33 +213,37 @@ function Header ({ isSang, setisSang }) {
                       <ul className='menu-list'>
                         <a href='/thongtin'>
                           <li>
+                            <div className='divmethodusd'>
+                              <svg
+                                stroke='currentColor'
+                                fill='currentColor'
+                                stroke-width='0'
+                                viewBox='0 0 512 512'
+                                height='1em'
+                                width='1em'
+                                xmlns='http://www.w3.org/2000/svg'
+                              >
+                                <path d='M406.5 399.6C387.4 352.9 341.5 320 288 320H224c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256C48 141.1 141.1 48 256 48s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6zm-40.1 32.7C334.4 452.4 296.6 464 256 464s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-272a40 40 0 1 1 0-80 40 40 0 1 1 0 80zm-88-40a88 88 0 1 0 176 0 88 88 0 1 0 -176 0z'></path>
+                              </svg>
+                              Thông tin tài khoản
+                            </div>
+                          </li>
+                        </a>
+                        <li onClick={() => setIsOpenDangXuat(true)}>
+                          <div className='divmethodusd'>
                             <svg
                               stroke='currentColor'
                               fill='currentColor'
                               stroke-width='0'
-                              viewBox='0 0 512 512'
+                              viewBox='0 0 24 24'
                               height='1em'
                               width='1em'
                               xmlns='http://www.w3.org/2000/svg'
                             >
-                              <path d='M406.5 399.6C387.4 352.9 341.5 320 288 320H224c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256C48 141.1 141.1 48 256 48s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6zm-40.1 32.7C334.4 452.4 296.6 464 256 464s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-272a40 40 0 1 1 0-80 40 40 0 1 1 0 80zm-88-40a88 88 0 1 0 176 0 88 88 0 1 0 -176 0z'></path>
+                              <path d='M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.2713 2 18.1757 3.57078 20.0002 5.99923L17.2909 5.99931C15.8807 4.75499 14.0285 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C14.029 20 15.8816 19.2446 17.2919 17.9998L20.0009 17.9998C18.1765 20.4288 15.2717 22 12 22ZM19 16V13H11V11H19V8L24 12L19 16Z'></path>
                             </svg>
-                            Thông tin tài khoản
-                          </li>
-                        </a>
-                        <li>
-                          <svg
-                            stroke='currentColor'
-                            fill='currentColor'
-                            stroke-width='0'
-                            viewBox='0 0 24 24'
-                            height='1em'
-                            width='1em'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path d='M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.2713 2 18.1757 3.57078 20.0002 5.99923L17.2909 5.99931C15.8807 4.75499 14.0285 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C14.029 20 15.8816 19.2446 17.2919 17.9998L20.0009 17.9998C18.1765 20.4288 15.2717 22 12 22ZM19 16V13H11V11H19V8L24 12L19 16Z'></path>
-                          </svg>
-                          Đăng xuất
+                            Đăng xuất
+                          </div>
                         </li>
                       </ul>
                     </div>
@@ -456,6 +511,10 @@ function Header ({ isSang, setisSang }) {
       <DangKyLayout
         isOpen={isModalDangKy}
         onClose={() => setIsOpenDangKy(false)}
+      />
+      <DangXuatLayout
+        isOpen={isModalDangXuat}
+        onClose={() => setIsOpenDangXuat(false)}
       />
     </div>
   )

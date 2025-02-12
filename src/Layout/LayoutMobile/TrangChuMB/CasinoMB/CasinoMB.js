@@ -31,7 +31,7 @@ function CasinoMB () {
                 {games.map((game, index) => (
                   <div className='GotoGame_container__azuAM' key={index}>
                     <div className='CardGame_container__NneKf'>
-                      <img src={`${game.img}`} alt='' width={600} height={90} />
+                      <img src={`${game.img}`} alt='' width={600} height={130} />
                     </div>
                     <div className='texthethaomb'>{game.name}</div>
                   </div>

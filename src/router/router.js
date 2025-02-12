@@ -11,8 +11,9 @@ import { BanCaLayoutMB } from '../Layout/LayoutMobile/BanCaLayoutMB'
 import { NoHuLayout } from '../Layout/LayoutLapTop/NoHuLayout'
 import { NoHuLayoutMB } from '../Layout/LayoutMobile/NoHuLayoutMB'
 import { HoaHongLayout } from '../Layout/LayoutLapTop/HoaHongLayout'
-import { HoaHongLayoutMB } from '../Layout/LayoutMobile/HoaHongLayoutMB'
 import { ThongTinLayout } from '../Layout/LayoutLapTop/ThongTinLayout'
+import { KhuyenMaiLayout } from '../Layout/LayoutMobile/KhuyenMaiLayout'
+import {ThongTinLayoutMB} from '../Layout/LayoutMobile/ThongTinLayoutMB'
 const IsMobile = () => {
   return useMediaQuery({ query: '(max-width: 767px)' })
 }
@@ -59,7 +60,15 @@ const publicRoutes = [
   },
   {
     path: '/thongtin',
-    component: ThongTinLayout
+    component: () => {
+      const isMobile = IsMobile()
+      return isMobile ? <ThongTinLayoutMB /> : <ThongTinLayout />
+    }
+  }
+  ,
+  {
+    path: '/khuyenmai',
+    component: KhuyenMaiLayout
   }
 ]
 const privateRoutes = []

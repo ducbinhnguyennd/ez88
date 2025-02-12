@@ -45,11 +45,11 @@
 /* Giãn ảnh full kích thước */
 .banner_item img {
     width: 100%;
-    height: 250px;
-    /* Điều chỉnh chiều cao nếu cần */
-    object-fit: cover;
-    /* Giữ ảnh không méo */
+    height: 180px;
     border-radius: 8px;
+}
+.slick-slide{
+    width: 380px !important;
 }
 
 .slick-dots {

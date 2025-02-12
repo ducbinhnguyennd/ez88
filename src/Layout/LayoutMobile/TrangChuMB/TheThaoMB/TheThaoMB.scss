@@ -41,8 +41,11 @@
 
 @media (max-width: 764px) {
     .GridColumn_container__QbIKO.GridColumn_col_5__H4lCj {
-        --columns: 1;
+        --columns: 1 !important;
         --gap: 12px;
+    }
+    .GridColumn_container__QbIKO.GridColumn_col_5__H4lCj.Grid_thethao {
+        --columns: 1 !important;
     }
 }
 

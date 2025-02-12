@@ -32,7 +32,7 @@ function TrangChuLayout () {
     <main className='baselayout_main'>
       <div className='mainhome_container'>
         <div className='layout_wrapper_container'>
-          <div className='mainhome_mb'>
+          <div>
             <div className='banner_container'>
               <Slider {...settings}>
                 <div className='banner_item'>
@@ -43,6 +43,9 @@ function TrangChuLayout () {
                 </div>
                 <div className='banner_item'>
                   <img src='/images/banner3.png' alt='Banner 3' />
+                </div>
+                <div className='banner_item'>
+                  <img src='/images/banner4.webp' alt='Banner 3' />
                 </div>
               </Slider>
             </div>
@@ -170,7 +173,6 @@ function TrangChuLayout () {
               </div>
             </div>
           </div>
-  
         </div>
       </div>
     </main>

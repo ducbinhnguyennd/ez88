@@ -5,11 +5,15 @@ import { ThongTinCaNhan } from './ThongTinCaNhan'
 import { LichSuCuoc } from './LichSuCuoc'
 import { useState } from 'react'
 import { TongQuatViTien } from './TongQuatViTien'
+import { useSearchParams } from 'react-router-dom'
+import { DangXuatLayout } from '../../LayoutMobile/DangXuatLayout'
 
 function ThongTinLayout () {
-  const [activeTab, setActiveTab] = useState('Thông tin cá nhân')
-  const [tieudechuy, settieudechuy] = useState('')
-  const [lichuy, setlichuy] = useState([])
+  const [searchParams] = useSearchParams()
+  const tabFromUrl = searchParams.get('tab') || 'Thông tin cá nhân'
+
+  const [activeTab, setActiveTab] = useState(tabFromUrl || 'Thông tin cá nhân')
+  const [isModalDangXuat, setIsOpenDangXuat] = useState(false)
 
   const tabs = [
     {
@@ -19,10 +23,6 @@ function ThongTinLayout () {
     {
       img: '/images/lichsucuoc.svg',
       name: 'Lịch sử cược'
-    },
-    {
-      img: '/images/dangxuat.svg',
-      name: 'Đăng xuất'
     }
   ]
   const wallet = [
@@ -63,6 +63,7 @@ function ThongTinLayout () {
       ]
     }
   ]
+  const currentTabData = wallet.find(tab => tab.name === tabFromUrl) || {}
 
   return (
     <main className='thongtin_container'>
@@ -99,19 +100,13 @@ function ThongTinLayout () {
                 <div className='menuprofile_wallet'>
                   {wallet.map((item, index) => (
                     <a
-                      href=''
+                      href={`/thongtin?tab=${item.name}`}
                       className={`menuprofile_wallet_item ${
                         activeTab === item.name
                           ? 'menuprofile_wallet_item_active'
                           : ''
                       }`}
                       key={index}
-                      onClick={e => {
-                        e.preventDefault()
-                        setActiveTab(item.name)
-                        settieudechuy(item.h2)
-                        setlichuy(item.li)
-                      }}
                     >
                       <img src={`${item.img}`} alt='' width={20} height={20} />
                       <span>{item.name}</span>
@@ -121,63 +116,59 @@ function ThongTinLayout () {
                 <div></div>
                 <div className='menuprofile_list'>
                   {tabs.map((tab, index) => (
-                    <div
-                      className={`menulist_item ${
-                        activeTab === tab.name ? 'menulist_item_active' : ''
-                      }`}
-                      key={index}
-                      onClick={() => setActiveTab(tab.name)}
-                    >
-                      <img
-                        src={`${tab.img}`}
-                        alt=''
-                        width={20}
-                        height={20}
-                        style={{ color: 'transparent' }}
-                      />
-                      <span>{tab.name}</span>
-                    </div>
+                    <a href={`/thongtin?tab=${tab.name}`}>
+                      <div
+                        className={`menulist_item ${
+                          activeTab === tab.name ? 'menulist_item_active' : ''
+                        }`}
+                        key={index}
+                        onClick={() => setActiveTab(tab.name)}
+                      >
+                        <img
+                          src={`${tab.img}`}
+                          alt=''
+                          width={20}
+                          height={20}
+                          style={{ color: 'transparent' }}
+                        />
+                        <span>{tab.name}</span>
+                      </div>
+                    </a>
                   ))}
+                  <div
+                    className={`menulist_item`}
+                    onClick={() => setIsOpenDangXuat(true)}
+                  >
+                    <img
+                      src='/images/dangxuat.svg'
+                      alt=''
+                      width={20}
+                      height={20}
+                      style={{ color: 'transparent' }}
+                    />
+                    <span>Đăng xuất</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className='menuprofile_content'>
-              {activeTab === 'Thông tin cá nhân' && <ThongTinCaNhan />}
-              {activeTab === 'Lịch sử cược' && <LichSuCuoc />}
-              {activeTab === 'Nạp tiền' && (
+              {tabFromUrl === 'Thông tin cá nhân' && <ThongTinCaNhan />}
+              {tabFromUrl === 'Lịch sử cược' && <LichSuCuoc />}
+              {['Nạp tiền', 'Rút tiền', 'Ví tiền'].includes(tabFromUrl) && (
                 <TongQuatViTien
-                  name={activeTab}
-                  setactivetab={setActiveTab}
-                  setlichuy={setlichuy}
-                  settieudechuy={settieudechuy}
-                  tieudechuy={tieudechuy}
-                  lichuy={lichuy}
-                />
-              )}
-              {activeTab === 'Rút tiền' && (
-                <TongQuatViTien
-                  name={activeTab}
-                  setactivetab={setActiveTab}
-                  setlichuy={setlichuy}
-                  settieudechuy={settieudechuy}
-                  tieudechuy={tieudechuy}
-                  lichuy={lichuy}
-                />
-              )}
-              {activeTab === 'Ví tiền' && (
-                <TongQuatViTien
-                  name={activeTab}
-                  setactivetab={setActiveTab}
-                  setlichuy={setlichuy}
-                  settieudechuy={settieudechuy}
-                  tieudechuy={tieudechuy}
-                  lichuy={lichuy}
+                  name={tabFromUrl}
+                  tieudechuy={currentTabData.h2 || ''}
+                  lichuy={currentTabData.li || []}
                 />
               )}
             </div>
           </div>
         </div>
       </div>
+      <DangXuatLayout
+        isOpen={isModalDangXuat}
+        onClose={() => setIsOpenDangXuat(false)}
+      />
     </main>
   )
 }

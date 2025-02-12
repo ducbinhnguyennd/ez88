@@ -27,6 +27,8 @@ html {
   --grey: #98a7b5;
   --page-shadow: #111415;
   --green: #4ad325;
+  --primary:#89eb34;
+  --text-color:#98a7b5;
   --menu-height-mobile: 50px;
   --header-height: 64px;
   --menu-height: 56px;
@@ -39,6 +41,7 @@ html {
     #373737 59.26%,
     #262626 100%
   );
+  --light:#fff;
   --p: 12px;
   --gap: 12px;
   --w-menu: 64px;

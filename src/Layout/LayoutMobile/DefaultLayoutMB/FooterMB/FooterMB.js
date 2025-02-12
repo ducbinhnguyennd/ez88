@@ -12,10 +12,10 @@ function FooterMB ({ activemenu, setactivemenu }) {
       link: '/'
     },
     {
-      name: 'Hoa hồng',
+      name: 'Khuyến mãi',
       img1: '/images/khuyenmai.webp',
-      img2: '/images/khuyenmai2.webp',
-      link: '/hoahong'
+      img2: '/images/khuyenmai3.webp',
+      link: '/khuyenmai'
     },
     {
       name: 'Cá nhân',

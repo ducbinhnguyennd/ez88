@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import './DangKyLayout.scss'
-import { DangNhapLayout } from '../DangNhapLayout'
-function DangKyLayout ({ isOpen, onClose }) {
+import './DangKyLayoutMB.scss'
+import { DangNhapLayoutMB } from '../DangNhapLayoutMB'
+function DangKyLayoutMB ({ isOpen, onClose }) {
   const [isPassword, setIsPasswword] = useState(true)
   const [isRePassword, setReIsPasswword] = useState(true)
   const [selectedType, setSelectedType] = useState('phone')
@@ -25,7 +25,6 @@ function DangKyLayout ({ isOpen, onClose }) {
               <path d='M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z'></path>
             </svg>
           </div>
-          <div className='formauth_image'></div>
           <div className='formauth_form'>
             <div className='formauth_tag'>
               <img src='/images/imgdangnhap1.webp' alt='' className='' />
@@ -311,13 +310,10 @@ function DangKyLayout ({ isOpen, onClose }) {
                 Không thể đăng ký? Liên hệ CSKH
               </span>
             </form>
-            <div className='FormLogin_denlong__WFfoN'>
-              <img src='/images/denlong.webp' alt='' />
-            </div>
           </div>
         </div>
       </div>
-      <DangNhapLayout
+      <DangNhapLayoutMB
         isOpen={isOpenDangNhap}
         onClose={() => setIsOpenDangNhap(false)}
       />
@@ -325,4 +321,4 @@ function DangKyLayout ({ isOpen, onClose }) {
   )
 }
 
-export default DangKyLayout
+export default DangKyLayoutMB
