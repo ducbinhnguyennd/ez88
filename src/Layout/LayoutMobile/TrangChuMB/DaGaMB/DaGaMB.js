@@ -1,18 +1,8 @@
-import './TheThaoMB.scss'
-function TheThaoMB () {
+function DaGaMB () {
   const games = [
-
     {
-      img: '/images/bti2.jpg',
-      name: 'BTI Sports'
-    },
-        {
-      img: '/images/saba2.jpg',
-      name: 'SABA Sports'
-    },
-        {
-      img: '/images/afb2.jpg',
-      name: 'AFB Sports'
+      img: '/images/daga2.jpg',
+      name: 'CockFight'
     }
   ]
   return (
@@ -38,4 +28,4 @@ function TheThaoMB () {
   )
 }
 
-export default TheThaoMB
+export default DaGaMB

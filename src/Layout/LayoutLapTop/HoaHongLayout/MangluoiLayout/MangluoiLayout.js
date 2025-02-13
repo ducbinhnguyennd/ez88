@@ -1,5 +1,7 @@
 import './MangluoiLayout.scss'
 import { useState } from 'react'
+import '../LichSuLayout/LichSuLayout.scss'
+import '../TongQuanLayout/TongQuanLayout.scss'
 function MangluoiLayout () {
   const [date, setDate] = useState('')
   const [type, setType] = useState('text')
@@ -42,7 +44,7 @@ function MangluoiLayout () {
                 onBlur={e => {
                   if (!e.target.value) setType('text')
                 }}
-                placeholder={type=== 'text'?'Select Date':'dd/mm/yyyy'}
+                placeholder={type === 'text' ? 'Select Date' : 'dd/mm/yyyy'}
               />
             </div>
           </div>

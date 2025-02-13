@@ -359,8 +359,8 @@ function MenuMB ({ activemenu, setactivemenu }) {
             <div className='menumb_game'>
               <a href='/thethao' className='menumb_game_item'></a>
               <a href='/casino' className='menumb_game_item1'></a>
-              <a href='/banca' className='menumb_game_item2'></a>
-              <a href='/nohu' className='menumb_game_item3'></a>
+              <a href='/nohu' className='menumb_game_item2'></a>
+              <a href='/banca' className='menumb_game_item3'></a>
             </div>
           </div>
         </div>
