@@ -48,7 +48,8 @@
     height: 180px;
     border-radius: 8px;
 }
-.slick-slide{
+
+.slick-slide {
     width: 380px !important;
 }
 
@@ -244,7 +245,7 @@
     grid-gap: var(--gap);
 }
 
-.gotogame_container{
+.gotogame_container {
     position: relative;
     cursor: pointer;
     -webkit-user-select: none;
@@ -253,16 +254,64 @@
     width: 100%;
     height: 100%;
 }
-.cardgame_container{
+
+.cardgame_container {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
 }
-.cardgame_img{
+
+.cardgame_img {
     color: transparent;
     max-width: 100%;
     transition: 0.2s;
     display: block;
     object-fit: cover;
 
+}
+
+.HelpCenter_container__ONosN {
+    border-radius: 16px 0 0 16px;
+    border: 2px solid #2a2d34;
+    background: #1c1e22;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 97;
+    width: 60px;
+    padding: 8px;
+    gap: 2px;
+    flex-direction: column;
+    display: flex;
+}
+
+.HelpCenter_item__8R90S {
+    position: relative;
+    background: linear-gradient(180deg, #5a5a5a, #303030);
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    i {
+        display: block;
+        position: relative;
+        padding-top: 100%;
+        width: 100%;
+
+        img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            color: transparent;
+        }
+
+    }
 }

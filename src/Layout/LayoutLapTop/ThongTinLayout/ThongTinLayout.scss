@@ -153,6 +153,7 @@
     padding: 8px 12px;
     border-radius: 6px;
     cursor: pointer;
+    margin-top: 3px;
 
     span {
         font-size: 16px;
@@ -172,4 +173,10 @@
     padding: 24px;
     color: var(--title-color);
     overflow: auto;
+}
+@media screen and (max-width: 768px) {
+    .menulist_item {
+        background-color: var(--standard-color);
+        color: var(--text-color);
+    }
 }

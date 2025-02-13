@@ -78,7 +78,7 @@ function ThongTinLayoutMB () {
               <div className='menuprofile_wallet'>
                 {wallet.map((item, index) => (
                   <a
-                    href={item.link}
+                    href={`/thongtin2?tab=${item.name}`}
                     className={`menuprofile_wallet_item ${
                       activeTab === item.name
                         ? 'menuprofile_wallet_item_active'
@@ -97,9 +97,7 @@ function ThongTinLayoutMB () {
               {tabs.map((tab, index) => (
                 <a href={tab.link}>
                   <div
-                    className={`menulist_item ${
-                      activeTab === tab.name ? 'menulist_item_active' : ''
-                    }`}
+                    className={`menulist_item`}
                     key={index}
                     onClick={() => setActiveTab(tab.name)}
                   >
@@ -126,7 +124,7 @@ function ThongTinLayoutMB () {
                   <span>Hoa hồng</span>
                 </div>
               </a> */}
-              <div className={`menulist_item`} onClick={()=>setIsOpenDangXuat(true)}>
+              <div className={`menulist_item `} onClick={()=>setIsOpenDangXuat(true)}>
                 <img
                   src='/images/dangxuat.svg'
                   alt=''

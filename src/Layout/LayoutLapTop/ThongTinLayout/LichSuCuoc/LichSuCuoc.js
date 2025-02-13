@@ -2,7 +2,6 @@ import './LichSuCuoc.scss'
 import { useState } from 'react'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
-
 function LichSuCuoc () {
   const [date, setDate] = useState('')
   const [enddate, setendDate] = useState('')

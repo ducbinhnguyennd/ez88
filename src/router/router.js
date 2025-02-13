@@ -16,6 +16,7 @@ import { ViTien } from '../Layout/LayoutLapTop/ThongTinLayout/ViTien'
 import { NapTien } from '../Layout/LayoutLapTop/ThongTinLayout/NapTien'
 import { ThongTinCaNhan } from '../Layout/LayoutLapTop/ThongTinLayout/ThongTinCaNhan'
 import { LichSuCuoc } from '../Layout/LayoutLapTop/ThongTinLayout/LichSuCuoc'
+import { ThongTinLayoutMB2 } from '../Layout/LayoutMobile/ThongTinLayoutMB2'
 const IsMobile = () => {
   return useMediaQuery({ query: '(max-width: 767px)' })
 }
@@ -80,6 +81,11 @@ const publicRoutes = [
   {
     path: '/lichsucuoc',
     component: LichSuCuoc
+  }
+    ,
+  {
+    path: '/thongtin2',
+    component: ThongTinLayoutMB2
   }
 ]
 const privateRoutes = []
