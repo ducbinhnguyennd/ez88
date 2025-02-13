@@ -91,7 +91,7 @@ function HeaderMB () {
                   </Tippy>
 
                   <a
-                    href='/naptien'
+                    href='/thongtin2?tab=Nạp tiền'
                     className='Button_container__By3IT Button_maxContent__29WwM'
                   >
                     <div className='Button_primaryLight__xb5yf Button_maxContent__29WwM Button_small__ZiSjz Button_rounded_6__tsqKR Button_p_6_12__yWNI_ Button_btn__z_3IU'>

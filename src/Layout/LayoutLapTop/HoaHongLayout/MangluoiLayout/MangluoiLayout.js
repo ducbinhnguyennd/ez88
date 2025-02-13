@@ -49,7 +49,7 @@ function MangluoiLayout () {
             </div>
           </div>
           <div>
-            <table class='rebate-table'>
+            <table className='rebate-table'>
               <thead>
                 <tr>
                   <th>Tên người dùng - Cấp độ</th>
