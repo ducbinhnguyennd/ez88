@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 import './HeaderMB.scss'
 import { DangKyLayoutMB } from '../../DangKyLayoutMB'

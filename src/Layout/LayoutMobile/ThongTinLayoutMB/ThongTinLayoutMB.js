@@ -4,6 +4,7 @@ import './ThongTinLayoutMB.scss'
 import { useSearchParams } from 'react-router-dom'
 import { useState } from 'react'
 import { DangXuatLayout } from '../DangXuatLayout'
+import { CucTele } from '../../LayoutLapTop/CucTele'
 
 function ThongTinLayoutMB () {
   const [searchParams] = useSearchParams()
@@ -46,6 +47,7 @@ function ThongTinLayoutMB () {
 
   return (
     <div className='thongtinmb_container'>
+      <CucTele/>
       <div className='grid wide'>
         <div className='menuprofile_main'>
           <div className='menuprofile_menu'>

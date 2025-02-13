@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { TongQuatViTien } from './TongQuatViTien'
 import { useSearchParams } from 'react-router-dom'
 import { DangXuatLayout } from '../../LayoutMobile/DangXuatLayout'
+import { CucTele } from '../CucTele'
 
 function ThongTinLayout () {
   const [searchParams] = useSearchParams()
@@ -25,6 +26,7 @@ function ThongTinLayout () {
       name: 'Lịch sử cược'
     }
   ]
+
   const wallet = [
     {
       img: '/images/vitien.svg',
@@ -63,10 +65,13 @@ function ThongTinLayout () {
       ]
     }
   ]
+  
   const currentTabData = wallet.find(tab => tab.name === tabFromUrl) || {}
 
   return (
     <main className='thongtin_container'>
+      <CucTele />
+
       <div className='menuprofile_container'>
         <div className='divthongtintong'>
           <div className='menuprofile_main'>

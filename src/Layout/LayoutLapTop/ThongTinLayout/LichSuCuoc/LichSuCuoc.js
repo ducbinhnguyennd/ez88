@@ -131,7 +131,7 @@ function LichSuCuoc () {
             </div>
           </div>
           <div>
-            <table class='rebate-table'>
+            <table className='rebate-table'>
               <thead>
                 <tr>
                   <th>Thời gian</th>

@@ -45,7 +45,7 @@ function QuyTacMoiLayout () {
       colorClass: 'divvien4',
       content: `
     <p>Tỷ lệ hoàn trả được hưởng sẽ khác nhau tùy theo mức hoàn trả, được tính bằng đơn vị tiền tệ USDT.</p>
-    <table class='rebate-table'>
+    <table className='rebate-table'>
       <thead>
         <tr>
           <th>Cấp độ</th>

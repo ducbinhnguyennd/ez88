@@ -3,6 +3,7 @@ import './TrangChuLayout.scss'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { CucTele } from '../CucTele'
 
 function TrangChuLayout () {
   const settings = {
@@ -31,13 +32,7 @@ function TrangChuLayout () {
 
   return (
     <main className='baselayout_main'>
-      <div className='HelpCenter_container__ONosN'>
-        <a href='' className='HelpCenter_item__8R90S'>
-          <i>
-            <img src='/images/tele.webp' alt='' width={24} height={24}/>
-          </i>
-        </a>
-      </div>
+      <CucTele />
       <div className='mainhome_container'>
         <div className='layout_wrapper_container'>
           <div>

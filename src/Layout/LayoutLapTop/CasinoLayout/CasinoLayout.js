@@ -1,6 +1,9 @@
+import { CucTele } from '../CucTele'
+
 function CasinoLayout () {
   return (
     <div className='bestgame_container'>
+      <CucTele />
       <div className='titlesection_container'>
         <p className='titlesection_name'>Casino</p>
       </div>

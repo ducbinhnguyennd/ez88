@@ -1,6 +1,9 @@
+import { CucTele } from '../CucTele'
+
 function BanCaLayout () {
   return (
     <div className='bestgame_container'>
+      <CucTele />
       <div className='titlesection_container'>
         <p className='titlesection_name'>Bắn cá</p>
       </div>

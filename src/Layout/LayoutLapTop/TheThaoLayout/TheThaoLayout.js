@@ -1,8 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import './TheThaoLayout.scss'
+import { CucTele } from '../CucTele'
 
 function TheThaoLayout () {
   return (
     <div className='bestgame_container'>
+      <CucTele />
+
       <div className='titlesection_container'>
         <p className='titlesection_name'>Thể thao</p>
       </div>

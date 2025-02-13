@@ -1,6 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { CucTele } from "../CucTele"
 function NoHuLayout () {
   return (
     <div className='bestgame_container'>
+      <CucTele/>
+
       <div className='titlesection_container'>
         <p className='titlesection_name'>Nổ hũ</p>
       </div>

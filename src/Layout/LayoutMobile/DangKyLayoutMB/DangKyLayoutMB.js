@@ -285,7 +285,7 @@ function DangKyLayoutMB ({ isOpen, onClose }) {
                     className='input_input'
                     placeholder='OTP'
                   />
-                  <div class='Input_sendBtn__cEMS2'>Lấy OTP</div>
+                  <div className='Input_sendBtn__cEMS2'>Lấy OTP</div>
                 </div>
               </label>
 
@@ -296,7 +296,7 @@ function DangKyLayoutMB ({ isOpen, onClose }) {
                   </div>
                 </div>
               </div>
-              <div class='FormLogin_note__3xgzD'>
+              <div className='FormLogin_note__3xgzD'>
                 Bạn đã có tài khoản?{' '}
                 <span
                   onClick={() => {
@@ -306,7 +306,7 @@ function DangKyLayoutMB ({ isOpen, onClose }) {
                   Đăng nhập ngay
                 </span>
               </div>
-              <span class='FormSignup_help__eYvaQ'>
+              <span className='FormSignup_help__eYvaQ'>
                 Không thể đăng ký? Liên hệ CSKH
               </span>
             </form>
