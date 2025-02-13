@@ -11,7 +11,7 @@ function MangluoiLayout () {
       <div className='tongquan_header'>
         <div className='tongquan_title'>
           <img src='/images/hoahonggt.png' alt='' width={24} height={24} />
-          <div>Mạng lưới</div>
+          <div>Thành viên</div>
         </div>
         <div className='tongquan_descreption'>
           Note: Lịch sử mạng lưới đội nhóm hiển thị doanh số của đội nhóm và
