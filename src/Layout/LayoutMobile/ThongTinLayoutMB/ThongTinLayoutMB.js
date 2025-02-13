@@ -42,6 +42,11 @@ function ThongTinLayoutMB () {
       img: '/images/lichsucuoc.svg',
       name: 'Lịch sử cược',
       link:'/lichsucuoc'
+    },
+    {
+      img: '/images/lichsucuoc.svg',
+      name: 'Lịch sử nạp rút',
+      link:'/lichsunaprut'
     }
   ]
 

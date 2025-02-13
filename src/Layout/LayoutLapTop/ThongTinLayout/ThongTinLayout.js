@@ -8,6 +8,7 @@ import { TongQuatViTien } from './TongQuatViTien'
 import { useSearchParams } from 'react-router-dom'
 import { DangXuatLayout } from '../../LayoutMobile/DangXuatLayout'
 import { CucTele } from '../CucTele'
+import { LichSuNapRut } from './LichSuNapRut'
 
 function ThongTinLayout () {
   const [searchParams] = useSearchParams()
@@ -24,6 +25,10 @@ function ThongTinLayout () {
     {
       img: '/images/lichsucuoc.svg',
       name: 'Lịch sử cược'
+    },
+    {
+      img: '/images/lichsucuoc.svg',
+      name: 'Lịch sử nạp rút'
     }
   ]
 
@@ -65,7 +70,7 @@ function ThongTinLayout () {
       ]
     }
   ]
-  
+
   const currentTabData = wallet.find(tab => tab.name === tabFromUrl) || {}
 
   return (
@@ -159,6 +164,8 @@ function ThongTinLayout () {
             <div className='menuprofile_content'>
               {tabFromUrl === 'Thông tin cá nhân' && <ThongTinCaNhan />}
               {tabFromUrl === 'Lịch sử cược' && <LichSuCuoc />}
+              {tabFromUrl === 'Lịch sử nạp rút' && <LichSuNapRut />}
+
               {['Nạp tiền', 'Rút tiền', 'Ví tiền'].includes(tabFromUrl) && (
                 <TongQuatViTien
                   name={tabFromUrl}
