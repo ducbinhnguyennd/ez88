@@ -4,7 +4,6 @@ function LichSuLayout () {
   const [date, setDate] = useState('')
   const [enddate, setendDate] = useState('')
 
-  const [type, setType] = useState('text')
 
   return (
     <div className='divtongquan_container'>

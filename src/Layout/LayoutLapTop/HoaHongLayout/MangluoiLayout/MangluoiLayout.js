@@ -4,7 +4,6 @@ import '../LichSuLayout/LichSuLayout.scss'
 import '../TongQuanLayout/TongQuanLayout.scss'
 function MangluoiLayout () {
   const [date, setDate] = useState('')
-  const [type, setType] = useState('text')
 
   return (
     <div className='divtongquan_container'>
