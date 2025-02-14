@@ -37,14 +37,12 @@ function MangluoiLayout () {
             <span>Hình thức</span>
             <div className='divinputdate'>
               <input
-                type={type}
+                type='date'
                 value={date}
                 onChange={e => setDate(e.target.value)}
-                onFocus={() => setType('date')}
-                onBlur={e => {
-                  if (!e.target.value) setType('text')
-                }}
-                placeholder={type === 'text' ? 'Select Date' : 'dd/mm/yyyy'}
+                
+                
+                placeholder={'dd/mm/yyyy'}
               />
             </div>
           </div>
