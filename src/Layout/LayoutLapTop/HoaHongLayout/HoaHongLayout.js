@@ -9,7 +9,7 @@ import { CucTele } from '../CucTele'
 function HoaHongLayout () {
   const [activeTab, setActiveTab] = useState('Giới thiệu')
 
-  const tabs = ['Giới thiệu', 'Mạng lưới', 'Lịch sử']
+  const tabs = ['Giới thiệu', 'Thành viên', 'Lịch sử']
 
   return (
     <div className='divhoahong_container'>
@@ -35,7 +35,7 @@ function HoaHongLayout () {
       </div>
       <div>
         {activeTab === 'Giới thiệu' && <GioiThieuLayout />}
-        {activeTab === 'Mạng lưới' && <MangluoiLayout />}
+        {activeTab === 'Thành viên' && <MangluoiLayout />}
         {activeTab === 'Lịch sử' && <LichSuLayout />}
       </div>
     </div>
