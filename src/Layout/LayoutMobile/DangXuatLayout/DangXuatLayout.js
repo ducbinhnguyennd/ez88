@@ -23,7 +23,7 @@ function DangXuatLayout ({ isOpen, onClose }) {
           <p className='Dialog_note__kz7NT'>
             Tài khoản của bạn sẽ bị đăng xuất khỏi thiết bị này.
           </p>
-          <div classNameName='Dialog_groupBtnPopup__SHV_R'>
+          <div className='Dialog_groupBtnPopup__SHV_R'>
             <div className='Button_container__By3IT Button_maxContent__29WwM'>
               <div className='Button_grey__1tZKm Button_rounded_6__tsqKR Button_maxContent__29WwM Button_small__ZiSjz Button_btn__z_3IU click'>
                 <div className='Button_text__FcN3u' onClick={onClose}>
