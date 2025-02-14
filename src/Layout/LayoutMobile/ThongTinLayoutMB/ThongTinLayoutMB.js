@@ -185,6 +185,15 @@ function ThongTinLayoutMB () {
                       <span>Facebook</span>
                     </a>
                   </div>
+                  {/* <div className='mainsupport_ez88'>
+                    <i>
+                      <img src='/images/cskh.webp' alt='' />
+                    </i>
+                    <div>
+                      <p>Chat với chúng tôi ngay!</p>
+                      <span>Live Chat CSKH 24/7</span>
+                    </div>
+                  </div> */}
                 </div>
               </div>
             </div>

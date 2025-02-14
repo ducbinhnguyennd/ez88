@@ -21,7 +21,7 @@ function TaiKhoan () {
         <span>Email</span>
         <span>petworldstore27@gmail.com</span>
       </div>
-      <div className='taikhoancn_item'>
+      {/* <div className='taikhoancn_item'>
         <span className='sinhnhat'>
           Sinh nhật
           <input type='date' />
@@ -55,7 +55,7 @@ function TaiKhoan () {
             {isSuaTelegram ? 'Đồng ý' : 'Sửa'}
           </button>
         </span>
-      </div>
+      </div> */}
     </div>
   )
 }

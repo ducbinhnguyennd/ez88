@@ -3,12 +3,13 @@ import { useState } from 'react'
 import './HoaHongLayout.scss'
 import { GioiThieuLayout } from './GioiThieuLayout'
 import { MangluoiLayout } from './MangluoiLayout'
+import LichSuLayout from './LichSuLayout/LichSuLayout'
 import { CucTele } from '../CucTele'
 
 function HoaHongLayout () {
   const [activeTab, setActiveTab] = useState('Giới thiệu')
 
-  const tabs = ['Giới thiệu', 'Mạng lưới']
+  const tabs = ['Giới thiệu', 'Mạng lưới', 'Lịch sử']
 
   return (
     <div className='divhoahong_container'>
@@ -35,6 +36,7 @@ function HoaHongLayout () {
       <div>
         {activeTab === 'Giới thiệu' && <GioiThieuLayout />}
         {activeTab === 'Mạng lưới' && <MangluoiLayout />}
+        {activeTab === 'Lịch sử' && <LichSuLayout />}
       </div>
     </div>
   )

@@ -88,7 +88,7 @@ function GioiThieuLayout () {
             </svg>
           </div>
         </div>
-        <div className='formgioithieu'>
+        {/* <div className='formgioithieu'>
           <label htmlFor=''>Liên kết Telegram Bot</label>
           <div className='formgioithieu_input'>
             <input
@@ -115,7 +115,7 @@ function GioiThieuLayout () {
               ></path>
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className='gioithieu_footer'></div>
     </div>

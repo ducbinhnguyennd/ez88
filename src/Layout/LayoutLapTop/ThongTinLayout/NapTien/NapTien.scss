@@ -48,17 +48,17 @@
     .naptien_container {
         color: var(--title-color);
         min-height: 100dvh;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
 
     .diachivi {
         align-items: center !important;
-
     }
-
+    .divlinklienketvi{
+        span{
+            width: calc(100vw - 80px);
+            overflow: hidden;
+        }
+    }
 }
 
 .method_naptien {
