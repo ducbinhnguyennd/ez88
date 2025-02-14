@@ -32,7 +32,8 @@ function LichSuLayout () {
                 type='date'
                 value={date}
                 onChange={e => setDate(e.target.value)}
-                placeholder={'dd/mm/yyyy'}
+                pattern='\d{2}/\d{2}/\d{4}'
+                title='Định dạng: dd/mm/yyyy'
               />
               <svg
                 viewBox='0 0 1024 1024'
@@ -49,7 +50,8 @@ function LichSuLayout () {
                 type='date'
                 value={enddate}
                 onChange={e => setendDate(e.target.value)}
-                placeholder={'dd/mm/yyyy'}
+                pattern='d{2}/d{2}/d{4}'
+                title='Định dạng: dd/mm/yyyy'
               />
               <svg
                 viewBox='64 64 896 896'

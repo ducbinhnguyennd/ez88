@@ -40,9 +40,8 @@ function MangluoiLayout () {
                 type='date'
                 value={date}
                 onChange={e => setDate(e.target.value)}
-                
-                
-                placeholder={'dd/mm/yyyy'}
+                pattern='d{2}/d{2}/d{4}'
+                title='Định dạng: dd/mm/yyyy'
               />
             </div>
           </div>
