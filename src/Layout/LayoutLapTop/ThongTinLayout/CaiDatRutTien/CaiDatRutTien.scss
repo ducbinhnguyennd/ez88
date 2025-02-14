@@ -18,3 +18,11 @@
     align-items: center;
     gap: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .caidatruttien_container {
+        color: var(--title-color);
+        min-height: 100dvh;
+        padding: 10px;
+    }
+}

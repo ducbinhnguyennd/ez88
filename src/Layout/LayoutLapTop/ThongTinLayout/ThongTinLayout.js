@@ -9,6 +9,7 @@ import { useSearchParams } from 'react-router-dom'
 import { DangXuatLayout } from '../../LayoutMobile/DangXuatLayout'
 import { CaiDatRutTien } from './CaiDatRutTien'
 import { CucTele } from '../CucTele'
+import { LichSuNapRut } from './LichSuNapRut'
 
 function ThongTinLayout () {
   const [searchParams] = useSearchParams()
@@ -29,6 +30,10 @@ function ThongTinLayout () {
     {
       img: '/images/caidatruttien.svg',
       name: 'Cài đặt rút tiền'
+    },
+    {
+      img: '/images/lichsucuoc.svg',
+      name: 'Lịch sử nạp rút'
     }
   ]
 
@@ -165,7 +170,9 @@ function ThongTinLayout () {
               {tabFromUrl === 'Thông tin cá nhân' && <ThongTinCaNhan />}
               {tabFromUrl === 'Lịch sử cược' && <LichSuCuoc />}
               {tabFromUrl === 'Cài đặt rút tiền' && <CaiDatRutTien />}
-              
+
+              {tabFromUrl === 'Lịch sử nạp rút' && <LichSuNapRut />}
+
               {['Nạp tiền', 'Rút tiền', 'Ví tiền'].includes(tabFromUrl) && (
                 <TongQuatViTien
                   name={tabFromUrl}

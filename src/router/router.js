@@ -18,6 +18,9 @@ import { ThongTinCaNhan } from '../Layout/LayoutLapTop/ThongTinLayout/ThongTinCa
 import { LichSuCuoc } from '../Layout/LayoutLapTop/ThongTinLayout/LichSuCuoc'
 import { ThongTinLayoutMB2 } from '../Layout/LayoutMobile/ThongTinLayoutMB2'
 import { CaiDatRutTien } from '../Layout/LayoutLapTop/ThongTinLayout/CaiDatRutTien'
+import { LichSuNapRut } from '../Layout/LayoutLapTop/ThongTinLayout/LichSuNapRut'
+import { DaGaLayout } from '../Layout/LayoutLapTop/DaGaLayout'
+
 const IsMobile = () => {
   return useMediaQuery({ query: '(max-width: 767px)' })
 }
@@ -41,6 +44,10 @@ const publicRoutes = [
   {
     path: '/banca',
     component: BanCaLayout
+  },
+    {
+    path: '/daga',
+    component: DaGaLayout
   },
   {
     path: '/nohu',
@@ -70,6 +77,10 @@ const publicRoutes = [
     component: RutTien
   },
   {
+    path: '/caidatruttien',
+    component: CaiDatRutTien
+  },
+  {
     path: '/naptien',
     component: NapTien
   },
@@ -80,6 +91,10 @@ const publicRoutes = [
   {
     path: '/lichsucuoc',
     component: LichSuCuoc
+  },
+  {
+    path: '/lichsunaprut',
+    component: LichSuNapRut
   },
   {
     path: '/thongtin2',

@@ -27,4 +27,28 @@
     p {
         color: var(--primary);
     }
+
+    .tippy-box {
+        width: 880px;
+    }
+}
+
+.itemnh {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .tippy-content {
+        background-color: var(--standard-color) !important;
+        padding: 0 !important;
+    }
+
+    .nganhang_body {
+        .tippy-box {
+            width: calc(100vw - 20px) !important;
+        }
+    }
 }

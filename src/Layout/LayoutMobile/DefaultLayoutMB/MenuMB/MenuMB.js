@@ -348,7 +348,7 @@ function MenuMB ({ activemenu, setactivemenu }) {
                       ></path>
                     </svg>
                   </i>
-                  <p className='MenuMobile_text_color__DIsiN'>Về EZ88</p>
+                  <p className='MenuMobile_text_color__DIsiN'>Về FNK88</p>
                 </div>
               </div>
             </div>
@@ -361,6 +361,8 @@ function MenuMB ({ activemenu, setactivemenu }) {
               <a href='/casino' className='menumb_game_item1'></a>
               <a href='/nohu' className='menumb_game_item2'></a>
               <a href='/banca' className='menumb_game_item3'></a>
+              <a href='/daga' className='menumb_game_item4'></a>
+
             </div>
           </div>
         </div>

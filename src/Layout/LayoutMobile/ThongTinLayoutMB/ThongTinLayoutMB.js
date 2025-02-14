@@ -39,11 +39,17 @@ function ThongTinLayoutMB () {
     {
       img: '/images/lichsucuoc.svg',
       name: 'Lịch sử cược',
-      link: '/lichsucuoc'
+      link:'/lichsucuoc'
+    },
+    {
+      img: '/images/lichsucuoc.svg',
+      name: 'Lịch sử nạp rút',
+      link:'/lichsunaprut'
     },
     {
       img: '/images/caidatruttien.svg',
-      name: 'Cài đặt rút tiền'
+      name: 'Cài đặt rút tiền',
+      link:'/caidatruttien'
     }
   ]
 
