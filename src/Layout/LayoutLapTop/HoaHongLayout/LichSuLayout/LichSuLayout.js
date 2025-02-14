@@ -1,9 +1,10 @@
 import './LichSuLayout.scss'
 import { useState } from 'react'
 function LichSuLayout () {
-  const [date, setDate] = useState('')
-  const [enddate, setendDate] = useState('')
+  const today = new Date().toISOString().split('T')[0]
 
+  const [date, setDate] = useState(today)
+  const [enddate, setendDate] = useState(today)
 
   return (
     <div className='divtongquan_container'>

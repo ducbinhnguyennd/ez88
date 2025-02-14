@@ -233,7 +233,7 @@ function HeaderMB () {
                   <div className='rfm-initial-child-container'>
                     <div className='rfm-child'>
                       <p className='pvipclub1'>
-                        EZ88 - Nhà cái uy tín số một thị trường Châu Á, Hỗ trợ
+                        FNK88 - Nhà cái uy tín số một thị trường Châu Á, Hỗ trợ
                         đa dạng các cổng thanh toán: ATM, Banking, MOMO,
                         USDT,... Khuyến mãi ngập tràn theo tháng, thỏa sức cá
                         cược. CSKH hỗ trợ nhiệt tình 24h/7.
@@ -244,7 +244,7 @@ function HeaderMB () {
                 <div className='divchu rfm-marquee'>
                   <div className='rfm-child'>
                     <p className='pvipclub1'>
-                      EZ88 - Nhà cái uy tín số một thị trường Châu Á, Hỗ trợ đa
+                      FNK88 - Nhà cái uy tín số một thị trường Châu Á, Hỗ trợ đa
                       dạng các cổng thanh toán: ATM, Banking, MOMO, USDT,...
                       Khuyến mãi ngập tràn theo tháng, thỏa sức cá cược. CSKH hỗ
                       trợ nhiệt tình 24h/7.

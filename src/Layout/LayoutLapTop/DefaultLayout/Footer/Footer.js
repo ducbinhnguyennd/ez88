@@ -10,7 +10,7 @@ function Footer ({ isSang }) {
             <div></div>
           </div>
           <p className='gameProvider_note'>
-            EZ88 tự hào là đối tác của hơn 20 nhà cung cấp hàng đầu khu vực.
+            FNK88 tự hào là đối tác của hơn 20 nhà cung cấp hàng đầu khu vực.
           </p>
           <div className='gridcolumn_container gridcolumn_col8'>
             <div className='GameProvider_provider__0Ah3M'>
@@ -183,12 +183,12 @@ function Footer ({ isSang }) {
               />
             </div>
             <p className='footer_text footer_hidden'>
-              EZ88 là một trong những nhà cái hàng đầu trong lĩnh vực cá cược
+              FNK88 là một trong những nhà cái hàng đầu trong lĩnh vực cá cược
               trực tuyến tại Châu Âu. Với sứ mệnh cung cấp trải nghiệm độc đáo
-              và an toàn cho người chơi, EZ88 không chỉ cung cấp các trò chơi cá
-              cược phong phú mà còn mang đến dịch vụ khách hàng chuyên nghiệp và
-              tiện lợi. Với sự đa dạng về các trò chơi casino, thể thao và
-              e-sports, cùng với các chương trình khuyến mãi hấp dẫn, EZ88 là
+              và an toàn cho người chơi, FNK88 không chỉ cung cấp các trò chơi
+              cá cược phong phú mà còn mang đến dịch vụ khách hàng chuyên nghiệp
+              và tiện lợi. Với sự đa dạng về các trò chơi casino, thể thao và
+              e-sports, cùng với các chương trình khuyến mãi hấp dẫn, FNK88 là
               lựa chọn lý tưởng cho những ai đam mê cá cược trực tuyến.
             </p>
             <span>
@@ -377,7 +377,7 @@ function Footer ({ isSang }) {
             </ul>
           </div>
           <div className='footer_section'>
-            <span className='footer_title'>EZ88</span>
+            <span className='footer_title'>FNK88</span>
             <ul>
               <li>
                 <a href='' className='footer_item'>

@@ -52,7 +52,14 @@
         color: var(--title-color);
         border: none;
         outline: none;
-        background-color: white;
+        background-color: transparent;
 
     }
+
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block !important;
+    opacity: 1;
+    background-color: white;
 }

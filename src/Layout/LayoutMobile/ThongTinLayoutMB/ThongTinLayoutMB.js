@@ -39,17 +39,17 @@ function ThongTinLayoutMB () {
     {
       img: '/images/lichsucuoc.svg',
       name: 'Lịch sử cược',
-      link:'/lichsucuoc'
+      link: '/lichsucuoc'
     },
     {
       img: '/images/lichsucuoc.svg',
       name: 'Lịch sử nạp rút',
-      link:'/lichsunaprut'
+      link: '/lichsunaprut'
     },
     {
       img: '/images/caidatruttien.svg',
       name: 'Cài đặt rút tiền',
-      link:'/caidatruttien'
+      link: '/caidatruttien'
     }
   ]
 
@@ -185,7 +185,7 @@ function ThongTinLayoutMB () {
                       <span>Facebook</span>
                     </a>
                   </div>
-                  {/* <div className='mainsupport_ez88'>
+                  {/* <div className='mainsupport_FNK88'>
                     <i>
                       <img src='/images/cskh.webp' alt='' />
                     </i>

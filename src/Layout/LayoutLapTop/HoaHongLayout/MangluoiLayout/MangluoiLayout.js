@@ -3,7 +3,8 @@ import { useState } from 'react'
 import '../LichSuLayout/LichSuLayout.scss'
 import '../TongQuanLayout/TongQuanLayout.scss'
 function MangluoiLayout () {
-  const [date, setDate] = useState('')
+  const today = new Date().toISOString().split('T')[0]
+  const [date, setDate] = useState(today)
 
   return (
     <div className='divtongquan_container'>

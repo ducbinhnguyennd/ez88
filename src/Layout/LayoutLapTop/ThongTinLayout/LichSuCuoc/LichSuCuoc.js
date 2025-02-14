@@ -3,10 +3,11 @@ import { useState } from 'react'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 function LichSuCuoc () {
-  const [date, setDate] = useState('')
-  const [enddate, setendDate] = useState('')
+  const today = new Date().toISOString().split('T')[0]
 
-  const [type, setType] = useState('text')
+  const [date, setDate] = useState(today)
+  const [enddate, setendDate] = useState(today)
+
   const [visible, setVisible] = useState(false)
   const [method, setmethod] = useState('ALL')
   const methods = ['ALL', 'Casino', 'Thể thao', 'Nổ hũ', 'Bắn cá']
@@ -107,6 +108,7 @@ function LichSuCuoc () {
               <input
                 type='date'
                 value={enddate}
+                onChange={e => setendDate(e.target.value)}
                 pattern='d{2}/d{2}/d{4}'
                 title='Định dạng: dd/mm/yyyy'
               />
