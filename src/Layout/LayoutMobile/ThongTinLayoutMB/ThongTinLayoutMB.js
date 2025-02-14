@@ -11,20 +11,18 @@ function ThongTinLayoutMB () {
   const tabFromUrl = searchParams.get('tab') || 'Thông tin cá nhân'
   const [isModalDangXuat, setIsOpenDangXuat] = useState(false)
 
-
   const [activeTab, setActiveTab] = useState(tabFromUrl || 'Thông tin cá nhân')
 
   const wallet = [
     {
       img: '/images/vitien.svg',
       name: 'Ví tiền',
-      link:'/vitien'
+      link: '/vitien'
     },
     {
       img: '/images/naptien.svg',
       name: 'Nạp tiền',
       link: '/naptien'
-
     },
     {
       img: '/images/ruttien.svg',
@@ -41,13 +39,17 @@ function ThongTinLayoutMB () {
     {
       img: '/images/lichsucuoc.svg',
       name: 'Lịch sử cược',
-      link:'/lichsucuoc'
+      link: '/lichsucuoc'
+    },
+    {
+      img: '/images/caidatruttien.svg',
+      name: 'Cài đặt rút tiền'
     }
   ]
 
   return (
     <div className='thongtinmb_container'>
-      <CucTele/>
+      <CucTele />
       <div className='grid wide'>
         <div className='menuprofile_main'>
           <div className='menuprofile_menu'>
@@ -126,7 +128,10 @@ function ThongTinLayoutMB () {
                   <span>Hoa hồng</span>
                 </div>
               </a> */}
-              <div className={`menulist_item `} onClick={()=>setIsOpenDangXuat(true)}>
+              <div
+                className={`menulist_item `}
+                onClick={() => setIsOpenDangXuat(true)}
+              >
                 <img
                   src='/images/dangxuat.svg'
                   alt=''
@@ -190,8 +195,8 @@ function ThongTinLayoutMB () {
         </div>
       </div>
       <DangXuatLayout
-      isOpen={isModalDangXuat}
-      onClose={() => setIsOpenDangXuat(false)}
+        isOpen={isModalDangXuat}
+        onClose={() => setIsOpenDangXuat(false)}
       />
     </div>
   )

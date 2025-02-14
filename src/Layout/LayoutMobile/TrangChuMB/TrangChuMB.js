@@ -4,6 +4,7 @@ import { CasinoMB } from './CasinoMB'
 import { NoHuMB } from './NoHuMB'
 import { BanCaMB } from './BanCaMB'
 import { DaGaMB } from './DaGaMB'
+import { CucTele } from '../../LayoutLapTop/CucTele'
 import { useState } from 'react'
 
 function TrangChuMB () {
@@ -17,6 +18,7 @@ function TrangChuMB () {
   ]
   return (
     <main className='trangchummb_container'>
+      <CucTele />
       <div className='trangchumb_main'>
         <div className='layouttrangchumb_container'>
           <div className='layouttrangchumb_container2'>
